@@ -1,0 +1,25 @@
+/*-----------------------------------General Styling---------------------------------------------*/
+body {margin: 0px; padding: 0px; font-family: roboto,sans-serif;;}
+
+
+
+/*------------------------------------Bottom-Navigation-------------------------------------------*/
+
+.bottom-nav-button > input{
+    display: none;
+}
+
+label>img {transition: 0.2s ease;;width:75px;object-fit: cover;height: 46px;margin-top: 5px;border-radius: 6px;margin-left: -8px;filter: saturate(0);}
+
+.bottom-nav-button > input:checked+label>img {background-color: #E4E4E4;filter: saturate(1);}
+
+.bottom-nav-button {display: inline-block;}
+
+.bottom-nav-wrapper {margin: auto;width: 351px  ;}
+
+.bottom-navigation {position: fixed; bottom: 0px; left: 0px; width: 100%;background-color: green;;;}
+
+@media only screen and (max-width: 359px) {
+    label > img {width: 65px;;}
+    .bottom-nav-wrapper {width: 310px;}
+  }

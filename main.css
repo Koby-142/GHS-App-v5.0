@@ -10,6 +10,8 @@ body {margin: 0px; padding: 0px; font-family: roboto,sans-serif;;}
 
 .logo-container {margin: auto;width: 66px;margin-top: 6px;}
 
+.nav-button {position: fixed;right: 18px;top: 18px;}
+
 
 /*------------------------------------Bottom-Navigation-------------------------------------------*/
 
@@ -33,3 +35,17 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
     label > img {width: 65px;;}
     .bottom-nav-wrapper {width: 310px;}
   }
+
+/*---------------------------------------Stories------------------------------------------*/
+
+.story-wrapper {width: 121px;height: 188px;background-size: cover;display: inline-block;margin-left: 12px;}
+
+.stories-container {margin-top: 56px;overflow: scroll;white-space: nowrap;}
+
+.story-wrapper > p {height: 53px;text-overflow: ellipsis; overflow: hidden;margin:0px;white-space: normal;font-size: 14px;width: 105px;margin-left: 5px;margin-top: 5px;color: white; z-index: 15;}
+
+.story-wrapper > h4 {font-size: 14px;margin: 0px;margin-left: 5px;width: 105px;color: white;z-index: 15;}
+
+.story-icon {margin-left: -90px; border-radius: 50px;z-index: 15;}
+
+.story-image {width: 121px; height: 188px; object-fit: cover;margin-bottom: -100px;border-radius: 10px;filter: brightness(0.8);z-index: -1;position: relative; ;}

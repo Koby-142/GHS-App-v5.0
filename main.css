@@ -1,5 +1,5 @@
 /*-----------------------------------General Styling---------------------------------------------*/
-body {margin: 0px; padding: 0px; font-family: roboto,sans-serif;;}
+body {margin: 0px; padding: 0px; font-family: roboto,sans-serif;overflow:scroll;white-space: nowrap;}
 
 
 /*------------------------------------Top-Navigation-----------------------------------------*/

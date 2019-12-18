@@ -38,11 +38,11 @@
 
     <script id="item-template" type="text/x-handlebars-template">
 
-        <div class="stories-container">
+        <div class="stories-container"id="story">
         {{#each this}}
 
-        <div class="story-wrapper" >
-            <img class="story-image" src="images/{{imageUrl}}">
+        <div class="story-wrapper vivify fadeIn delay-{{id}}00" >
+            <img class="story-image" loading="lazy" src="images/{{imageUrl}}">
             <img class="story-icon" src="badges/{{badge}}">
             <h4>{{name}}</h4>
             <p>{{description}}</p>
@@ -56,6 +56,41 @@
         <p>Tap Here To Submit Your Story For Review</p>
     </div>
     </div>
+    </script>
+
+    <!-------------------Navigation API Endpoint--------------->
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/ghsApp/home', function (
+                data) {
+                var template = Handlebars.compile($('#item-template2').html())
+                $('#items2').html(template(data.home))
+            })
+        })
+    </script>
+
+    <!-------------------Navigation Template------------------->
+
+    <script id="item-template2" type="text/x-handlebars-template">
+
+        <div class="content-feed">
+        {{#each this}}
+
+        <div class="content-card">
+            <img class="content-badge" src="Badges/{{badge}}">
+            <div class="right-content">
+                <h3>{{by}}</h3>
+                <p>{{description}}</p>
+                    {{{imageUrl}}}
+            </div>
+           
+        </div>
+
+    {{/each}}
+
+        </div>
     </script>
 </head>
 
@@ -85,68 +120,34 @@
 
     <!----------------------Content Feed-------------------->
 
-    <div class="content-feed">
-        <div class="content-card">
-            <img class="content-badge" src="/Badges/GHS App Icon.svg">
-            <div class="right-content">
-                <h3>Gulfport High Athletics</h3>
-                <p>Caleb Bergman and Sherry Dymond are the 2019-2020 Gulfport Exchange Club Students of the Year for
-                    Gulfport High School. They will both represent GHS and compete for the National award for a $10,000
-                    scholarship!</p>
-                    <img src="images/Anouncements.jpg">
+    <div id="items2"></div>
+    <!----------------Bottom-Navigation-------------->
+    <div class="bottom-navigation">
+        <div class="bottom-nav-wrapper">
+            <div class="bottom-nav-button start">
+                <input id="nav-btn1" type="radio" name="bottom-nav">
+                <label for="nav-btn1"><img src="icons/Menu.svg"></label>
             </div>
-            </img>
+            <div class="bottom-nav-button">
+                <input id="nav-btn2" type="radio" name="bottom-nav">
+                <label for="nav-btn2"><img src="icons/Grades.svg"></label>
+            </div>
+            <div class="bottom-nav-button">
+                <input id="nav-btn3" type="radio" name="bottom-nav" checked>
+                <label for="nav-btn3"><img src="icons/Home.svg"></label>
+            </div>
+            <div class="bottom-nav-button">
+                <input id="nav-btn4" type="radio" name="bottom-nav">
+                <label for="nav-btn4"><img src="icons/Calendar.svg"></label>
+            </div>
+            <div class="bottom-nav-button">
+                <input id="nav-btn5" type="radio" name="bottom-nav">
+                <label for="nav-btn5"><img src="icons/work-dev.svg"></label>
+            </div>
         </div>
+    </div>
 
-        <div class="content-card">
-            <img class="content-badge" src="/Badges/GHS App Icon.svg">
-            <div class="right-content">
-                <h3>Gulfport High Athletics</h3>
-                <p>Caleb Bergman and Sherry Dymond are the 2019-2020 Gulfport Exchange Club Students of the Year for
-                    Gulfport High School. They will both represent GHS and compete for the National award for a $10,000
-                    scholarship!</p>
-                    <img src="images/Anouncements.jpg">
-            </div>
-            </img>
-        </div>
 
-        <div class="content-card">
-            <img class="content-badge" src="/Badges/GHS App Icon.svg">
-            <div class="right-content">
-                <h3>Gulfport High Athletics</h3>
-                <p>Caleb Bergman and Sherry Dymond are the 2019-2020 Gulfport Exchange Club Students of the Year for
-                    Gulfport High School. They will both represent GHS and compete for the National award for a $10,000
-                    scholarship!</p>
-                    <img src="images/Anouncements.jpg">
-            </div>
-            </img>
-        </div>
-</div>
-        <!----------------Bottom-Navigation-------------->
-        <div class="bottom-navigation">
-            <div class="bottom-nav-wrapper">
-                <div class="bottom-nav-button start">
-                    <input id="nav-btn1" type="radio" name="bottom-nav">
-                    <label for="nav-btn1"><img src="icons/Menu.svg"></label>
-                </div>
-                <div class="bottom-nav-button">
-                    <input id="nav-btn2" type="radio" name="bottom-nav">
-                    <label for="nav-btn2"><img src="icons/Grades.svg"></label>
-                </div>
-                <div class="bottom-nav-button">
-                    <input id="nav-btn3" type="radio" name="bottom-nav" checked>
-                    <label for="nav-btn3"><img src="icons/Home.svg"></label>
-                </div>
-                <div class="bottom-nav-button">
-                    <input id="nav-btn4" type="radio" name="bottom-nav">
-                    <label for="nav-btn4"><img src="icons/Calendar.svg"></label>
-                </div>
-                <div class="bottom-nav-button">
-                    <input id="nav-btn5" type="radio" name="bottom-nav">
-                    <label for="nav-btn5"><img src="icons/work-dev.svg"></label>
-                </div>
-            </div>
-        </div>
 </body>
 
 </html>

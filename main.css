@@ -4,7 +4,7 @@ body {margin: 0px; padding: 0px; font-family: roboto,sans-serif;;}
 
 /*------------------------------------Top-Navigation-----------------------------------------*/
 
-.top-navigation {position: fixed; background-color: white; width: 100%; height: 55px; left: 0px; top: 0px;;}
+.top-navigation {position: fixed; background-color: white; width: 100%; height: 55px; left: 0px; top: 0px;z-index: 50;}
 
 .logo-container > img{width: 66px;}
 
@@ -50,6 +50,10 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 
 .story-image {width: 121px; height: 188px; object-fit: cover;margin-bottom: -100px;border-radius: 10px;filter: brightness(0.8);z-index: -1;position: relative; ;}
 
+#items {transition: 0.2s ease;}
+
+
+
 /*------------------------------------Group-Buttons--------------------------------------------*/
 
 .group-btn {width:33%;margin-left: -5px;height: 48px;background-color: white;border: solid 1px lightgray;}
@@ -70,12 +74,18 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 
 .right-content {width: 80%;margin-left: 65px;}
 
-.right-content > img {width: 100%;border-radius: 10px;margin-top: 10px;height: 160px; object-fit: cover;}
+.right-content > a > img {width: 100%;border-radius: 10px;margin-top: 10px;height: 160px; object-fit: cover;border: solid 1px lightgray;}
+
+.right-content > a {pointer-events: none;}
 
 .right-content > p {margin: 0px;margin-top: 5px;font-size: 14px;}
 
 .right-content > h3 {margin: 0px;font-size: 15px;}
 
 .content-badge {float: left;width: 55px;border: solid 1px lightgray;border-radius: 50px;margin-left: -5px;}
+
+.right-content > iframe {width: 100% !important;height: 150px;border-radius: 10px;margin-top: 10px;}
+
+
 
 

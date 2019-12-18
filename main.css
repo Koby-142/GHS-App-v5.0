@@ -2,6 +2,14 @@
 body {margin: 0px; padding: 0px; font-family: roboto,sans-serif;;}
 
 
+/*------------------------------------Top-Navigation-----------------------------------------*/
+
+.top-navigation {position: fixed; background-color: green; width: 100%; height: 100%; left: 0px; top: 0px;;}
+
+.logo-container > img{width: 66px;}
+
+.logo-container {margin: auto;width: 66px;margin-top: 6px;}
+
 
 /*------------------------------------Bottom-Navigation-------------------------------------------*/
 
@@ -9,7 +17,7 @@ body {margin: 0px; padding: 0px; font-family: roboto,sans-serif;;}
     display: none;
 }
 
-label>img {transition: 0.2s ease;;width:75px;object-fit: cover;height: 46px;margin-top: 5px;border-radius: 6px;margin-left: -8px;filter: saturate(0);}
+label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;margin-top: 5px;border-radius: 6px;margin-left: -8px;filter: saturate(0);}
 
 .start {margin-left: 8px;}
 
@@ -17,13 +25,9 @@ label>img {transition: 0.2s ease;;width:75px;object-fit: cover;height: 46px;marg
 
 .bottom-nav-button {display: inline-block;}
 
-.bottom-nav-wrapper {margin: auto;width: 360px  ;}
+.bottom-nav-wrapper {margin: auto;width: 355px  ;}
 
 .bottom-navigation {position: fixed; bottom: 0px; left: 0px; width: 100%;background-color:white}
-
-.logo-container > img{width: 66px;}
-
-.logo-container {margin: auto;width: 66px;margin-top: 6px;}
 
 @media only screen and (max-width: 359px) {
     label > img {width: 65px;;}

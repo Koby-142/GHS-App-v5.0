@@ -70,11 +70,11 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 
 .right-content {width: 80%;margin-left: 65px;}
 
-.right-content > img {width: 100%;border-radius: 10px;margin-top: 10px;}
+.right-content > img {width: 100%;border-radius: 10px;margin-top: 10px;height: 160px; object-fit: cover;}
 
-.right-content > p {margin: 0px;margin-top: 5px;}
+.right-content > p {margin: 0px;margin-top: 5px;font-size: 14px;}
 
-.right-content > h3 {margin: 0px;}
+.right-content > h3 {margin: 0px;font-size: 15px;}
 
 .content-badge {float: left;width: 55px;border: solid 1px lightgray;border-radius: 50px;margin-left: -5px;}
 

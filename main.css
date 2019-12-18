@@ -49,3 +49,17 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 .story-icon {margin-left: -90px; border-radius: 50px;z-index: 15;}
 
 .story-image {width: 121px; height: 188px; object-fit: cover;margin-bottom: -100px;border-radius: 10px;filter: brightness(0.8);z-index: -1;position: relative; ;}
+
+/*------------------------------------Group-Buttons--------------------------------------------*/
+
+.group-btn {width:33%;margin-left: -5px;height: 48px;background-color: white;border: solid 1px lightgray;}
+
+.group-btn:focus {outline: none;;}
+
+.left-group {margin-left: 3.3px;border-radius: 10px 0px 0px 10px;}
+
+.right-group {border-radius: 0px 10px 10px 0px;}
+
+.group-wrapper {margin: auto; width: 95%;margin-top: 10px;}
+
+.grouped-buttons {position: sticky; top: 55px;width: 100%;z-index: 150;}

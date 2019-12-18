@@ -14,6 +14,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0" />
     <!--------------------Material Icons------------------------->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--------------------Jquery / Handlebars CDN-->
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js">
+    </script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--------------------Stories API Endpoint-------------------->
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/ghsApp/story', function (
+                data) {
+                var template = Handlebars.compile($('#item-template').html())
+                $('#items').html(template(data.story))
+            })
+        })
+    </script>
+
+    <!------------------Story Template------------------------>
+
+    <script id="item-template" type="text/x-handlebars-template">
+
+        <div class="stories-container">
+        {{#each this}}
+
+        <div class="story-wrapper" >
+            <img class="story-image" src="images/{{imageUrl}}">
+            <img class="story-icon" src="badges/{{badge}}">
+            <h4>{{name}}</h4>
+            <p>{{description}}</p>
+        </div>
+    {{/each}}
+    </div>
+    </script>
 </head>
 
 <body>
@@ -28,29 +64,17 @@
 
     <!---------------------Stories------------------------>
 
-    <div class="stories-container">
-        <div class="story-wrapper" >
-            <img class="story-image" src="images/1029_bisp_Shugart McCoy.jpg">
-            <img class="story-icon" src="badges/GHS App Icon.svg">
-            <h4>GHS App Stories</h4>
-            <p>Tell your story. Inspire and help others.</p>
-        </div>
+    <div id="items"></div>
 
-        <div class="story-wrapper" >
-            <img class="story-image" src="images/IMG_4589.png">
-            <img class="story-icon" src="badges/Gulfport School District.svg">
-            <h4>From Ms.Walker</h4>
-            <p>Caleb Bergman and Sherry Dymond are the 2019-2020 Gulfport Exchange Club Students of the Year for Gulfport High School. They will both represent GHS and compete for the National award for  a $10,000 scholarship!</p>
-        </div>
+    <!---------------------Grouped Button------------------->
 
-        <div class="story-wrapper" >
-            <img class="story-image" src="images/IMG_5605.jpeg">
-            <img class="story-icon" src="badges/OG G.svg">
-            <h4>Key Club</h4>
-            <p>volunteering at the Buddy Walk on Saturday at the Sportsplex.</p>
+    <div class="grouped-buttons">
+        <div class="group-wrapper ">
+            <button class="group-btn left-group">Senior Home</button>
+            <button class="group-btn">Live Game</button>
+            <button class="group-btn right-group">Live Archive</button>
         </div>
     </div>
-
     <!----------------Bottom-Navigation-------------->
     <div class="bottom-navigation">
         <div class="bottom-nav-wrapper">

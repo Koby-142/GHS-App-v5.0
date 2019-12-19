@@ -90,6 +90,8 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 
 .inject-frame {position: fixed; top: 55px; left: 0px; width: 100%; height:89vh; background-color: white;border: none;z-index: 100;}
 
+#frame {display: none;}
+
 
 
 

@@ -121,21 +121,33 @@
     <!----------------------Content Feed-------------------->
 
     <div id="items2"></div>
+
+    <!----------------------Popup Iframe-------------------->
+
+    <div class="popup-frame" id="frame">
+        <iframe src="https://www.cssmatic.com/" class="inject-frame" id="inject-frame">
+
+        </iframe>
+    </div>
+
     <!----------------Bottom-Navigation-------------->
     <div class="bottom-navigation">
         <div class="bottom-nav-wrapper">
-            <div class="bottom-nav-button start">
+            <div class="bottom-nav-button start" onclick="document.getElementById('inject-frame').src='none';">
                 <input id="nav-btn1" type="radio" name="bottom-nav">
                 <label for="nav-btn1"><img src="icons/Menu.svg"></label>
             </div>
-            <div class="bottom-nav-button">
+            <div class="bottom-nav-button" onclick="document.getElementById('inject-frame').src='none';">
                 <input id="nav-btn2" type="radio" name="bottom-nav">
                 <label for="nav-btn2"><img src="icons/Grades.svg"></label>
             </div>
-            <div class="bottom-nav-button">
-                <input id="nav-btn3" type="radio" name="bottom-nav" checked>
-                <label for="nav-btn3"><img src="icons/Home.svg"></label>
-            </div>
+           
+                <div class="bottom-nav-button">
+                    
+                    <input id="nav-btn3" type="radio" name="bottom-nav" checked>
+                    <label for="nav-btn3"><img src="icons/Home.svg"></label>
+                </div>
+            
             <div class="bottom-nav-button">
                 <input id="nav-btn4" type="radio" name="bottom-nav">
                 <label for="nav-btn4"><img src="icons/Calendar.svg"></label>
@@ -146,7 +158,11 @@
             </div>
         </div>
     </div>
-
+    <script>
+        function target(){
+            document.getElementById("frame").style.display="none";
+        } 
+    </script>
 
 </body>
 

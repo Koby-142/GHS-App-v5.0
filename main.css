@@ -1,10 +1,10 @@
 /*-----------------------------------General Styling---------------------------------------------*/
-body {margin: 0px; padding: 0px; font-family: roboto,sans-serif;overflow:scroll;white-space: nowrap;}
+body {margin: 0px; padding: 0px; font-family: roboto,sans-serif;}
 
 
 /*------------------------------------Top-Navigation-----------------------------------------*/
 
-.top-navigation {position: fixed; background-color: white; width: 100%; height: 55px; left: 0px; top: 0px;z-index: 50;}
+.top-navigation {position: fixed; background-color: white; width: 100%; height: 55px; left: 0px; top: 0px;z-index: 160;}
 
 .logo-container > img{width: 66px;}
 
@@ -29,7 +29,7 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 
 .bottom-nav-wrapper {margin: auto;width: 355px  ;}
 
-.bottom-navigation {position: fixed; bottom: 0px; left: 0px; width: 100%;background-color:white}
+.bottom-navigation {position: fixed; bottom: 0px; left: 0px; width: 100%;background-color:white;z-index: 200;}
 
 @media only screen and (max-width: 359px) {
     label > img {width: 65px;;}
@@ -66,7 +66,7 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 
 .group-wrapper {margin: auto; width: 95%;margin-top: 10px;}
 
-.grouped-buttons {position: sticky; top: 55px;width: 100%;z-index: 150;}
+.grouped-buttons {position: sticky; top: 55px;width: 100%;z-index: 50;}
 
 /*------------------------------------Content Feed-------------------------------------------*/
 
@@ -85,6 +85,10 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 .content-badge {float: left;width: 55px;border: solid 1px lightgray;border-radius: 50px;margin-left: -5px;}
 
 .right-content > iframe {width: 100% !important;height: 150px;border-radius: 10px;margin-top: 10px;}
+
+/*----------------------------------Pop Up Frame-----------------------------------------*/
+
+.inject-frame {position: fixed; top: 0px; left: 0px; width: 100%; height: 90%; background-color: white;border: none;z-index: 100;}
 
 
 

@@ -72,7 +72,7 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 
 .content-card {margin: auto; width: 90%;;margin-top: 15px;border-bottom: solid 1px lightgray;padding-bottom: 15px;}
 
-.right-content {width: 80%;margin-left: 65px;}
+.right-content {width: 80%;margin-left: 60px;}
 
 .right-content > a > img {width: 100%;border-radius: 10px;margin-top: 10px;height: 160px; object-fit: cover;border: solid 1px lightgray;}
 
@@ -82,7 +82,7 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 
 .right-content > h3 {margin: 0px;font-size: 15px;}
 
-.content-badge {float: left;width: 55px;border: solid 1px lightgray;border-radius: 50px;margin-left: -5px;}
+.content-badge {float: left;width: 50px;border: solid 1px lightgray;border-radius: 50px;margin-left: -5px;}
 
 .right-content > iframe {width: 100% !important;height: 150px;border-radius: 10px;margin-top: 10px;}
 
@@ -91,6 +91,13 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 .inject-frame {position: fixed; top: 55px; left: 0px; width: 100%; height:89vh; background-color: white;border: none;z-index: 100;}
 
 #frame {display: none;}
+
+.iframe-loader {position: fixed; left: 0px;top: 0px; width:
+  100%;height: 100vh;background-color: white;z-index: 190;}
+
+  .iframe-loader > div{margin: auto; width: 100px;margin-top: 35vh;}
+
+  .iframe-loader > div > img {width: 100%;}
 
 
 

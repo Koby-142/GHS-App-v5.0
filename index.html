@@ -125,7 +125,8 @@
     <!----------------------Popup Iframe-------------------->
 
     <div class="popup-frame" id="frame">
-        <iframe src="" class="inject-frame" id="inject-frame">
+
+        <iframe src="" class="inject-frame" id="inject-frame" onload="loaded()">
 
         </iframe>
     </div>
@@ -165,6 +166,7 @@
         function view(){
             document.getElementById("frame").style.display="none";
         }
+      
     </script>
 
 </body>

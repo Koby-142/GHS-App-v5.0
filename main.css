@@ -52,9 +52,7 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 
 #items {transition: 0.2s ease;}
 
-#story-frame {position:fixed; left:0px; top:0px;z-index: -50;}
-
-#story-frame:target {z-index: 600;}
+#story-frame {display: none;}
 
 #story-frame > iframe {top: 0px;z-index: 600;height: 100vh;}
 

@@ -45,14 +45,14 @@
 
         <div class="stories-container"id="story">
         {{#each this}}
-
-        <div onclick="story();document.getElementById('story-inject').src='https://ghsappv5.netlify.com/story.html#story{{id}}';" class="story-wrapper vivify fadeIn delay-{{id}}00" >
+<a href="#story-frame" onclick="story();document.getElementById('story-inject').src='https://ghsappv5.netlify.com/story.html#story{{id}}';">
+        <div  class="story-wrapper vivify fadeIn delay-{{id}}00" >
             <img class="story-image" loading="lazy" src="images/{{imageUrl}}">
             <img class="story-icon" src="badges/{{badge}}">
             <h4>{{name}}</h4>
             <p>{{description}}</p>
         </div>
-
+    </a>
     {{/each}}
 
     <div class="story-wrapper" >
@@ -116,9 +116,9 @@
 
     <!----------------------Story Iframe-------------------->
 
-    <div class="popup-frame" id="story-frame">
+    <div class="popup-frame" id="story-frame" >
 
-        <iframe src="https://ghsappv5.netlify.com/story.html#" class="inject-frame" id="story-inject">
+        <iframe src="https://ghsappv5.netlify.com/story.html#story1" class="inject-frame" id="story-inject"  >
 
         </iframe>
         <div class="story-close">
@@ -195,7 +195,7 @@
 
     <script>
         function story() {
-            document.getElementById("story-frame").style.display = "block";
+            document.getElementById("story-frame").style.z-index = "600";
         }
 
         function close() {

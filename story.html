@@ -1,0 +1,95 @@
+<!--
+    GHS App | v5.0
+    Developed By Jacoby Broadnax
+    For Gulfport High School
+-->
+<!DOCTYPE html>
+
+<head>
+    <title>GHS App | v5.0</title>
+    <!-----------------CSS------------------->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="vivify.min.css">
+    <!-----------------Prevent User Zoom---------------------->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0" />
+    <!--------------------Material Icons------------------------->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--------------------Jquery / Handlebars CDN---------------->
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js">
+    </script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--------------------Stories API Endpoint-------------------->
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/ghsApp/data1', function (
+                data) {
+                var template = Handlebars.compile($('#item-template').html())
+                $('#items').html(template(data.data1))
+            })
+        })
+    </script>
+
+    <!------------------Story Template------------------------>
+
+    <script id="item-template" type="text/x-handlebars-template">
+
+      
+        {{#each this}}
+        <style>
+        #story{{id}}{
+            display:none;
+        }
+        #story{{id}}:target{
+            display:block;
+        }
+        </style>
+<div class="story-opened" id="story{{id}}">
+   <div class="story-opened-image">
+      <img src="images/{{{imageUrl}}}">
+       </div>
+       <div class="story-text">
+        <div class="content-card">
+            <img class="content-badge" src="Badges/{{badge}}">
+            <div class="right-content">
+                <h3>{{name}}</h3>
+                <p>{{description}}</p>
+                    {{{imageUrl}}}
+            </div>
+           
+        </div>
+       </div>
+    </div>
+    {{/each}}
+
+  
+ 
+    </script>
+
+
+</head>
+
+<body>
+  
+<div class="story-view">
+<div id="items"></div>
+</div>
+
+    <script>
+        function target(){
+            document.getElementById("frame").style.display="block";
+        } 
+        function view(){
+            document.getElementById("frame").style.display="none";
+        }
+      
+    </script>
+
+
+</body>
+
+</html>

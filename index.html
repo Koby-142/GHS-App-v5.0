@@ -26,10 +26,10 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/ghsApp/story', function (
+            $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/ghsApp/data1', function (
                 data) {
                 var template = Handlebars.compile($('#item-template').html())
-                $('#items').html(template(data.story))
+                $('#items').html(template(data.data1))
             })
         })
     </script>
@@ -63,10 +63,10 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/ghsApp/home', function (
+            $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/ghsApp/data2', function (
                 data) {
                 var template = Handlebars.compile($('#item-template2').html())
-                $('#items2').html(template(data.home))
+                $('#items2').html(template(data.data2))
             })
         })
     </script>

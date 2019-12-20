@@ -52,8 +52,15 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 
 #items {transition: 0.2s ease;}
 
+/*------------------------------------Opened Stories------------------------------------------*/
 
+.story-opened-image > img {position: fixed; left: 0px; width: 100%; top: 0px;height: 100vh;object-fit: cover;}
 
+.story-text {position: fixed; top: 30px;background-color: rgba(0, 0, 0, 0.445);}
+
+.story-text > .content-card > .right-content {color: white;;}
+
+.story-text > .content-card {border: none;}
 /*------------------------------------Group-Buttons--------------------------------------------*/
 
 .group-btn {width:33%;margin-left: -5px;height: 48px;background-color: white;border: solid 1px lightgray;}

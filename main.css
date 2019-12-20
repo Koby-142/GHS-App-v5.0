@@ -80,7 +80,7 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 
 .story-grid > a > button {width: 100%; background-color: transparent;height: 100vh;margin-bottom: -100%;position: relative; z-index: 50;margin-top: -250%;border: none;}
 
-.story-opened {}
+.end-story > a > button {width: 100%; background-color: transparent;height: 100vh;margin-top: -100vh;border: none;;}
 
 /*------------------------------------Group-Buttons--------------------------------------------*/
 

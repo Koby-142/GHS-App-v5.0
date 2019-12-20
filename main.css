@@ -48,7 +48,7 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 
 .story-wrapper > h4 {font-size: 14px;margin: 0px;margin-left: 5px;width: 105px;color: white;z-index: 15;}
 
-.story-icon {margin-left: -90px; border-radius: 50px;z-index: 15;border-style: dashed;padding: 2px;border-color: #3e5294;border-width: 2.5px;; }
+.story-icon {margin-left: -90px; border-radius: 50px;z-index: 15;border-style: dashed;padding: 2px;border-color: #012395;border-width: 2.5px;; }
 
 .story-image {width: 121px; height: 188px; object-fit: cover;margin-bottom: -100px;border-radius: 10px;filter: brightness(0.8);z-index: -1;position: relative; ;}
 

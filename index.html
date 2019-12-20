@@ -10,7 +10,12 @@
     <!-----------------CSS------------------->
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="vivify.min.css">
+    <!---------------------No Robots----------------------->
+
+    <meta name="robots" content="noindex" />
+
     <!-----------------Prevent User Zoom---------------------->
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0" />
     <!--------------------Material Icons------------------------->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -41,7 +46,7 @@
         <div class="stories-container"id="story">
         {{#each this}}
 
-        <div onclick="target();document.getElementById('inject-frame').src='https://ghsappv5.netlify.com/story.html#story{{id}}';" class="story-wrapper vivify fadeIn delay-{{id}}00" >
+        <div onclick="story();document.getElementById('story-inject').src='https://ghsappv5.netlify.com/story.html#story{{id}}';" class="story-wrapper vivify fadeIn delay-{{id}}00" >
             <img class="story-image" loading="lazy" src="images/{{imageUrl}}">
             <img class="story-icon" src="badges/{{badge}}">
             <h4>{{name}}</h4>
@@ -109,6 +114,15 @@
 
     <div id="items"></div>
 
+    <!----------------------Story Iframe-------------------->
+
+    <div class="popup-frame" id="story-frame">
+
+        <iframe src="" class="inject-frame" id="story-inject">
+
+        </iframe>
+    </div>
+
     <!---------------------Grouped Button------------------->
 
     <div class="grouped-buttons">
@@ -126,10 +140,15 @@
     <!----------------------Popup Iframe-------------------->
 
     <div class="popup-frame" id="frame">
-
+        <div class="story-close">
+            <div>
+                <i class="material-icons">close</i>
+            </div>
+        </div>
         <iframe src="" class="inject-frame" id="inject-frame" onload="loaded()">
 
         </iframe>
+
     </div>
 
     <!----------------Bottom-Navigation-------------->
@@ -173,7 +192,15 @@
         }
     </script>
 
+    <script>
+        function story() {
+            document.getElementById("story-frame").style.display = "block";
+        }
 
+        function close() {
+            document.getElementById("story-frame").style.display = "none";
+        }
+    </script>
 </body>
 
 </html>

@@ -52,6 +52,14 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 
 #items {transition: 0.2s ease;}
 
+#story-frame {display: none;}
+
+#story-frame > iframe {top: 0px;z-index: 600;height: 100vh;}
+
+.story-close {position: fixed; bottom: 50px; left: 0px; z-index: 800;;}
+
+.story-close > div > i {width: 50px; height: 50px; background-color: white;;}
+
 /*------------------------------------Opened Stories------------------------------------------*/
 
 .story-opened-image > img { width: 100%; top: 0px;height: 100vh;object-fit: cover;}
@@ -63,6 +71,7 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 .story-text > .content-card > .right-content {color: white;;}
 
 .story-text > .content-card {border: none;}
+
 /*------------------------------------Group-Buttons--------------------------------------------*/
 
 .group-btn {width:33%;margin-left: -5px;height: 48px;background-color: white;border: solid 1px lightgray;}

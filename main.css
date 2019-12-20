@@ -1,5 +1,5 @@
 /*-----------------------------------General Styling---------------------------------------------*/
-body {margin: 0px; padding: 0px; font-family: roboto,sans-serif;}
+body {margin: 0px; padding: 0px; font-family: roboto,sans-serif;background-color: white}
 
 
 /*------------------------------------Top-Navigation-----------------------------------------*/
@@ -11,6 +11,8 @@ body {margin: 0px; padding: 0px; font-family: roboto,sans-serif;}
 .logo-container {margin: auto;width: 66px;margin-top: 6px;}
 
 .nav-button {position: fixed;right: 18px;top: 18px;}
+
+.navigation-cover {position: fixed; background-color: white; width: 100%; height: 100vh;z-index: -14 }
 
 
 /*------------------------------------Bottom-Navigation-------------------------------------------*/
@@ -46,21 +48,23 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 
 .story-wrapper > h4 {font-size: 14px;margin: 0px;margin-left: 5px;width: 105px;color: white;z-index: 15;}
 
-.story-icon {margin-left: -90px; border-radius: 50px;z-index: 15;}
+.story-icon {margin-left: -90px; border-radius: 50px;z-index: 15;border-style: dashed;padding: 2px;border-color: #012395 }
 
 .story-image {width: 121px; height: 188px; object-fit: cover;margin-bottom: -100px;border-radius: 10px;filter: brightness(0.8);z-index: -1;position: relative; ;}
 
 #items {transition: 0.2s ease;}
 
-#story-frame {position:fixed; left:0px; top:0px;z-index: -50;}
+#story-frame {position:fixed; left:0px;z-index: -50;opacity:0;transition: 0.2s linear;height: 40px;top: -159px}
 
-#story-frame:target {z-index: 600;}
 
-#story-frame > iframe {top: 0px;z-index: 600;height: 100vh;}
 
-.story-close {position: fixed; bottom: 50px; left: 0px; z-index: 800;;}
+#story-frame > iframe {top: 0px;height: 100%;width: 100%}
 
-.story-close > div > i {width: 50px; height: 50px; background-color: white;;}
+#story-frame:target {z-index: 600;height: 100%;opacity: 1;top: 0px;}
+
+.story-close {position: fixed; bottom: 50px; left: 0px;z-index: 150}
+
+.story-close > div > i {width: 50px; height: 50px; background-color: white;;border-radius: 50px;background-color: rgba(0, 0, 0, 0.445);}
 
 /*------------------------------------Opened Stories------------------------------------------*/
 

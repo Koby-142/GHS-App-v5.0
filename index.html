@@ -45,10 +45,10 @@
 
         <div class="stories-container"id="story">
         {{#each this}}
-<a href="#story-frame" onclick="story();document.getElementById('story-inject').src='https://ghsappv5.netlify.com/story.html#story{{id}}';">
-        <div  class="story-wrapper vivify fadeIn delay-{{id}}00" >
+<a href="#story-frame" >
+        <div  class="story-wrapper vivify fadeIn delay-{{id}}00" onclick="document.getElementById('story-inject').src='https://ghsappv5.netlify.com/story.html#story{{id}}';">
             <img class="story-image" loading="lazy" src="images/{{imageUrl}}">
-            <img class="story-icon" src="badges/{{badge}}">
+            <img class="story-icon vivify pulsate infinite delay-{{id}}00" src="badges/{{badge}}">
             <h4>{{name}}</h4>
             <p>{{description}}</p>
         </div>
@@ -57,7 +57,7 @@
 
     <div class="story-wrapper" >
         <img class="story-image" src="Images/Anouncements.jpg">
-        <img class="story-icon" src="Assets/Add.svg">
+        <img style="border: none" class="story-icon " src="Assets/Add.svg">
         <h4>Create Post</h4>
         <p>Tap Here To Submit Your Story For Review</p>
     </div>
@@ -101,7 +101,11 @@
 </head>
 
 <body>
+
     <!------------------Top-Navigation-------------->
+    <div class="navigation-cover">
+        
+        </div>
     <div class="top-navigation">
 
         <div class="logo-container">
@@ -118,14 +122,16 @@
 
     <div class="popup-frame" id="story-frame" >
 
-        <iframe src="https://ghsappv5.netlify.com/story.html#story1" class="inject-frame" id="story-inject"  >
+        <iframe src="https://ghsappv5.netlify.com/story.html#story1" class="inject-frame vivify fadeInTop" id="story-inject"  >
 
         </iframe>
-        <div class="story-close">
+        <a href="#">
+        <div class="story-close" id="story-close" >
             <div>
                 <i class="material-icons">close</i>
             </div>
         </div>
+    </a>
     </div>
 
     <!---------------------Grouped Button------------------->
@@ -195,11 +201,11 @@
 
     <script>
         function story() {
-            document.getElementById("story-frame").style.z-index = "600";
+            document.getElementById("story-close").style.display="block";
         }
 
         function close() {
-            document.getElementById("story-frame").style.display = "none";
+            document.getElementById("story-close").style.display = "none";
         }
     </script>
 </body>

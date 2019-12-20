@@ -41,12 +41,13 @@
         <div class="stories-container"id="story">
         {{#each this}}
 
-        <div class="story-wrapper vivify fadeIn delay-{{id}}00" >
+        <div onclick="target();document.getElementById('inject-frame').src='https://ghsappv5.netlify.com/story.html#story{{id}}';" class="story-wrapper vivify fadeIn delay-{{id}}00" >
             <img class="story-image" loading="lazy" src="images/{{imageUrl}}">
             <img class="story-icon" src="badges/{{badge}}">
             <h4>{{name}}</h4>
             <p>{{description}}</p>
         </div>
+
     {{/each}}
 
     <div class="story-wrapper" >
@@ -124,9 +125,9 @@
 
     <!----------------------Popup Iframe-------------------->
 
-    <div class="popup-frame" id="frame" style="display: block;">
+    <div class="popup-frame" id="frame">
 
-        <iframe src="https://ghsappv5.netlify.com/story.html#story2" class="inject-frame" id="inject-frame" onload="loaded()">
+        <iframe src="" class="inject-frame" id="inject-frame" onload="loaded()">
 
         </iframe>
     </div>
@@ -138,35 +139,38 @@
                 <input id="nav-btn1" type="radio" name="bottom-nav">
                 <label for="nav-btn1"><img src="icons/Menu.svg"></label>
             </div>
-            <div class="bottom-nav-button" onclick="target();document.getElementById('inject-frame').src='https://ghsappv5.netlify.com/grades.html';">
+            <div class="bottom-nav-button"
+                onclick="target();document.getElementById('inject-frame').src='https://ghsappv5.netlify.com/grades.html';">
                 <input id="nav-btn2" type="radio" name="bottom-nav">
                 <label for="nav-btn2"><img src="icons/Grades.svg"></label>
             </div>
-           
-                <div class="bottom-nav-button" onclick="view()">
-                    
-                    <input id="nav-btn3" type="radio" name="bottom-nav" checked>
-                    <label for="nav-btn3"><img src="icons/Home.svg"></label>
-                </div>
-            
-            <div class="bottom-nav-button" onclick="target();document.getElementById('inject-frame').src='https://ghsappv5.netlify.com/calendar.html';">
+
+            <div class="bottom-nav-button" onclick="view()">
+
+                <input id="nav-btn3" type="radio" name="bottom-nav" checked>
+                <label for="nav-btn3"><img src="icons/Home.svg"></label>
+            </div>
+
+            <div class="bottom-nav-button"
+                onclick="target();document.getElementById('inject-frame').src='https://ghsappv5.netlify.com/calendar.html';">
                 <input id="nav-btn4" type="radio" name="bottom-nav">
                 <label for="nav-btn4"><img src="icons/Calendar.svg"></label>
             </div>
-            <div class="bottom-nav-button" onclick="target();document.getElementById('inject-frame').src='https://workforcedevelopment.netlify.com';">
+            <div class="bottom-nav-button"
+                onclick="target();document.getElementById('inject-frame').src='https://workforcedevelopment.netlify.com';">
                 <input id="nav-btn5" type="radio" name="bottom-nav">
                 <label for="nav-btn5"><img src="icons/work-dev.svg"></label>
             </div>
         </div>
     </div>
     <script>
-        function target(){
-            document.getElementById("frame").style.display="block";
-        } 
-        function view(){
-            document.getElementById("frame").style.display="none";
+        function target() {
+            document.getElementById("frame").style.display = "block";
         }
-      
+
+        function view() {
+            document.getElementById("frame").style.display = "none";
+        }
     </script>
 
 

@@ -38,31 +38,27 @@
 
     <script id="item-template" type="text/x-handlebars-template">
 
-      
+
         {{#each this}}
         <style>
-        #story{{id}}{
-            display:none;
-        }
-        #story{{id}}:target{
-            display:block;
-        }
+
         </style>
 <div class="story-opened" id="story{{id}}">
-   <div class="story-opened-image">
-      <img src="images/{{{imageUrl}}}">
-       </div>
-       <div class="story-text">
+    <div class="story-text">
         <div class="content-card">
             <img class="content-badge" src="Badges/{{badge}}">
             <div class="right-content">
                 <h3>{{name}}</h3>
                 <p>{{description}}</p>
-                    {{{imageUrl}}}
+                  
             </div>
            
         </div>
        </div>
+   <div class="story-opened-image">
+      <img src="images/{{{imageUrl}}}">
+       </div>
+   
     </div>
     {{/each}}
 
@@ -74,19 +70,19 @@
 </head>
 
 <body>
-  
-<div class="story-view">
-<div id="items"></div>
-</div>
+
+    <div class="story-view">
+        <div id="items"></div>
+    </div>
 
     <script>
-        function target(){
-            document.getElementById("frame").style.display="block";
-        } 
-        function view(){
-            document.getElementById("frame").style.display="none";
+        function target() {
+            document.getElementById("frame").style.display = "block";
         }
-      
+
+        function view() {
+            document.getElementById("frame").style.display = "none";
+        }
     </script>
 
 

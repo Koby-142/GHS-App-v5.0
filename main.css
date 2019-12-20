@@ -54,9 +54,11 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 
 /*------------------------------------Opened Stories------------------------------------------*/
 
-.story-opened-image > img {position: fixed; left: 0px; width: 100%; top: 0px;height: 100vh;object-fit: cover;}
+.story-opened-image > img { width: 100%; top: 0px;height: 100vh;object-fit: cover;}
 
-.story-text {position: fixed; top: 30px;background-color: rgba(0, 0, 0, 0.445);}
+.story-opened-image {height: 100vh;}
+
+.story-text {background-color: rgba(0, 0, 0, 0.445);position: absolute;;}
 
 .story-text > .content-card > .right-content {color: white;;}
 

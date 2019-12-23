@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="main.css">
+    <!-----------------Prevent User Zoom---------------------->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0" />
+    <!--------------------Jquery / Handlebars CDN /---------------->
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js">
+    </script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-------------------Navigation API Endpoint--------------->
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/ghsApp/data3', function (
+                data) {
+                var template = Handlebars.compile($('#item-template3').html())
+                $('#items3').html(template(data.data3))
+            })
+        })
+    </script>
+
+    <!-------------------Navigation Template------------------->
+
+    <script id="item-template3" type="text/x-handlebars-template">
+
+        <div class="content-feed">
+    {{#each this}}
+
+    <div class="content-card lazyload">
+      
+        <div class="right-content" style="margin-left: 0px;">
+            <h3>{{date}} | {{time}}</h3>
+            <p> {{activity}} | {{location}}</p>
+           
+        </div>
+       
+    </div>
+
+{{/each}}
+
+    </div>
+</script>
+</head>
+
+<body>
+
+
+    <div id="items3">
+        <div class="iframe-loader" id="loader">
+            <div>
+                <img
+                    src="https://camo.githubusercontent.com/a1a81b0529517027d364ee8432cf9a8bd309542a/687474703a2f2f692e696d6775722e636f6d2f56446449444f522e676966">
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

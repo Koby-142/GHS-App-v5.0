@@ -145,5 +145,7 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 
 .popup-close > h4 {float: left;margin-left: 15px;margin-top: 18px;}
 
+.mini-button {border: solid 1px lightgray; border-radius: 50px; background-color: white;padding: 5px;margin-top: 5px;}
+
 
 

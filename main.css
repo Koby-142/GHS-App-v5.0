@@ -151,7 +151,7 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 
 .footer-badge > div {margin: auto; width: 75px;}
 
-.footer-badge {position: fixed; bottom: 0px;width: 100%; ;}
+.footer-badge {position: fixed; bottom: 50px;width: 100%; ;}
 
 
 

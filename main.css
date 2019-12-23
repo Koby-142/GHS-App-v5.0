@@ -44,7 +44,7 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 
 .stories-container {margin-top: 56px;overflow: scroll;white-space: nowrap;}
 
-.story-wrapper > p {height: 53px;text-overflow: ellipsis; overflow: hidden;margin:0px;white-space: normal;font-size: 14px;width: 105px;margin-left: 5px;margin-top: 5px;color: white; z-index: 15;}
+.story-wrapper > p {height: 50px;text-overflow: ellipsis; overflow: hidden;margin:0px;white-space: normal;font-size: 14px;width: 100%;margin-left: 5px;margin-top: 5px;color: white; z-index: 15;}
 
 .story-wrapper > h4 {font-size: 14px;margin: 0px;margin-left: 5px;width: 105px;color: white;z-index: 15;}
 

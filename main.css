@@ -147,6 +147,10 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 
 .mini-button {border: solid 1px lightgray; border-radius: 50px; background-color: white;padding: 5px;margin-top: 5px;}
 
+.mini-button:focus {outline: none;}
+
+.mini-button:hover {background-color: lightgray;}
+
 .footer-badge > div > p > strong {padding-right: 3px;}
 
 .footer-badge > div {margin: auto; width: 75px;}

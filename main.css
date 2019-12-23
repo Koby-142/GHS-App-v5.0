@@ -27,13 +27,13 @@ label {}
 
 .start {margin-left: 8px;}
 
-label>img:active {background-color: rgb(210, 211, 255);}
+label>img:active {}
 
 .bottom-nav-button > input:checked+label>img {filter: saturate(1);}
 
 .bottom-nav-button {display: inline-block;}
 
-.bottom-nav-button:focus {background-color: rgb(210, 211, 255);}
+.bottom-nav-button:focus {}
 
 .bottom-nav-wrapper {margin: auto;width: 355px  ;}
 

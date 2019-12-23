@@ -27,7 +27,7 @@
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
- 
+
     <!--------------------Stories API Endpoint-------------------->
 
     <script type="text/javascript">
@@ -105,8 +105,8 @@
 
     <!------------------Top-Navigation-------------->
     <div class="navigation-cover">
-        
-        </div>
+
+    </div>
     <div class="top-navigation">
 
         <div class="logo-container">
@@ -119,30 +119,43 @@
 
     <div id="items"></div>
 
-    <!----------------------Story Iframe-------------------->
+    <!----------------------pullup Iframe-------------------->
 
-    <div class="popup-frame" id="story-frame" >
-
-        <iframe src="https://ghsappv5.netlify.com/story.html#story1" class="inject-frame vivify fadeInTop" id="story-inject"  >
+    <div class="popup-frame vivify fadeInTop" id="pullup-frame">
+        <div class="popup-close">
+<i class="material-icons">close</i>
+<h4>Live Games</h4>
+        </div>
+        <iframe src="" class="inject2-frame " id="pullup-inject">
 
         </iframe>
-        <a href="#">
-        <div class="story-close" id="story-close" >
-            <div>
-                <i class="material-icons">close</i>
-            </div>
-        </div>
-    </a>
+
     </div>
 
-    <a href="https://upload.webdevhoc.tk/">Test Upload</a>
+    <!----------------------Story Iframe-------------------->
+
+    <div class="popup-frame" id="story-frame">
+
+        <iframe src="https://ghsappv5.netlify.com/story.html#story1" class="inject-frame vivify fadeInTop"
+            id="story-inject">
+
+        </iframe>
+
+    </div>
+
     <!---------------------Grouped Button------------------->
 
     <div class="grouped-buttons">
         <div class="group-wrapper ">
-            <button class="group-btn left-group">Senior Home</button>
-            <button class="group-btn">Live Game</button>
-            <button class="group-btn right-group">Live Archive</button>
+            <button class="group-btn left-group"
+                onclick="document.getElementById('story-inject').src='https://ghsappv5.netlify.com/story.html#story1';">Senior
+                Home</button>
+            <button class="group-btn"
+                onclick="document.getElementById('story-inject').src='https://ghsappv5.netlify.com/story.html#story2';">Live
+                Game</button>
+            <button class="group-btn right-group"
+                onclick="document.getElementById('story-inject').src='https://ghsappv5.netlify.com/story.html#story3';">Live
+                Archive</button>
         </div>
     </div>
 
@@ -153,7 +166,7 @@
     <!----------------------Popup Iframe-------------------->
 
     <div class="popup-frame" id="frame">
-     
+
         <iframe src="" class="inject-frame" id="inject-frame" onload="loaded()">
 
         </iframe>
@@ -203,14 +216,14 @@
 
     <script>
         function story() {
-            document.getElementById("story-close").style.display="block";
+            document.getElementById("story-close").style.display = "block";
         }
 
         function close() {
             document.getElementById("story-close").style.display = "none";
         }
     </script>
- 
+
 </body>
 
 </html>

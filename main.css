@@ -137,9 +137,13 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 
 #pullup-frame:target {display: block;}
 
-#pullup-inject {position: fixed; top: 55px; left: 0px; width: 100%; height:100vh; background-color: white;border: none;z-index: 800;border: solid red 3px;}
+#pullup-inject {position: fixed; top: 55px; left: 0px; width: 100%; height:100vh; background-color: white;border: none;z-index: 800;border: none;}
 
-.popup-close {width: 100%; background-color: green;height: 55px;}
+.popup-close {width: 100%; background-color: white;height: 55px;color: black;}
+
+.popup-close > i {float: left;margin-top: 15px;;margin-left: 15px;}
+
+.popup-close > h4 {float: left;margin-left: 15px;margin-top: 18px;}
 
 
 

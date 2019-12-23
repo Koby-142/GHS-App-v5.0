@@ -147,5 +147,11 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 
 .mini-button {border: solid 1px lightgray; border-radius: 50px; background-color: white;padding: 5px;margin-top: 5px;}
 
+.footer-badge > div > p > strong {padding-right: 3px;}
+
+.footer-badge > div {margin: auto; width: 75px;}
+
+.footer-badge {position: fixed; bottom: 0px;width: 100%; ;}
+
 
 

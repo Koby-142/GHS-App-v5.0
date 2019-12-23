@@ -65,6 +65,9 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 .story-close {position: fixed; bottom: 50px; left: 0px;z-index: 150}
 
 .story-close > div > i {width: 50px; height: 50px; background-color: white;;border-radius: 50px;background-color: rgba(0, 0, 0, 0.445);}
+.story-loader-items {padding-bottom:34px; padding-top: 34px;}
+.story-loader-items > div {margin: auto;width: 100px;margin-top: 80px;}
+.story-loader-items> div > img {width: 100%;}
 
 /*------------------------------------Opened Stories------------------------------------------*/
 
@@ -86,7 +89,9 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 
 .group-btn {width:33%;margin-left: -5px;height: 48px;background-color: white;border: solid 1px lightgray;}
 
-.group-btn:focus {outline: none;;}
+.group-btn:focus {outline: none;}
+
+.group-btn:hover {background-color: lightgray;}
 
 .left-group {margin-left: 3.3px;border-radius: 10px 0px 0px 10px;}
 

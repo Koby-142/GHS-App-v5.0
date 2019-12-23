@@ -141,7 +141,7 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 
 .popup-close {width: 100%; background-color: white;height: 55px;color: black;}
 
-.popup-close > i {float: left;margin-top: 15px;;margin-left: 15px;}
+.popup-close > i {float: right;margin-top: 15px;;margin-right: 15px;}
 
 .popup-close > h4 {float: left;margin-left: 15px;margin-top: 18px;}
 

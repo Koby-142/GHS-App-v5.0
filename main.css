@@ -161,4 +161,8 @@ label>img {transition: 0.2s ease;;width:70px;object-fit: cover;height: 42px;marg
 
 .shome {margin-top: -15px;}
 
+.button-overflow {overflow: scroll;white-space: nowrap;}
+
+.spacer-wide {width: 12px;display: inline-block;}
+
 

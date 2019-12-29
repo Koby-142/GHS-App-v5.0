@@ -4,8 +4,7 @@ body {margin: 0px; padding: 0px; font-family: roboto,sans-serif;background-color
 
 /*------------------------------------Top-Navigation-----------------------------------------*/
 
-.top-navigation {position: fixed; background-color: white; width: 100%; height: 55px; left: 0px; top: 0px;z-index: 160;  -webkit-backdrop-filter: blur(50px);
-  backdrop-filter: blur(50px);background-color: rgba(255, 255, 255, 0.637);;}
+.top-navigation {position: fixed; width: 100%; height: 55px; left: 0px; top: 0px;z-index: 160; background-color: white;;}
 
 .logo-container > img{width: 66px;}
 
@@ -46,8 +45,7 @@ label>img:active {}
 
 .bottom-nav-wrapper {margin: auto;width: 355px  ;}
 
-.bottom-navigation {position: fixed; bottom: 0px; left: 0px; width: 100%;z-index: 200;border-top: solid 1px lightgray;   -webkit-backdrop-filter: blur(50px);
-  backdrop-filter: blur(50px);background-color: rgba(255, 255, 255, 0.637);;}
+.bottom-navigation {position: fixed; bottom: 0px; left: 0px; width: 100%;z-index: 200;border-top: solid 1px lightgray;background-color: white;;}
 
 @media only screen and (max-width: 359px) {
     label > img {width: 65px;;}
@@ -121,6 +119,8 @@ label>img:active {}
 
 .content-card {margin: auto; width: 90%;;margin-top: 15px;border-bottom: solid 1px lightgray;padding-bottom: 15px;}
 
+.content-feed {margin-bottom: 55px;;}
+
 .right-content {width: 80%;margin-left: 60px;}
 
 .right-content > a > img {width: 100%;border-radius: 10px;margin-top: 10px;height: 160px; object-fit: cover;border: solid 1px lightgray;}
@@ -137,7 +137,9 @@ label>img:active {}
 
 /*----------------------------------Pop Up Frame-----------------------------------------*/
 
-.inject-frame {position: fixed; top: 0px; left: 0px; width: 100%; height:95vh; background-color: white;border: none;z-index: 100;padding-top: 55px;;}
+.inject-frame {position: fixed; top: 0px; left: 0px; width: 100%; height:95vh; background-color: white;border: none;z-index: 100;;}
+
+#inject-frame {padding-top: 55px;}
 
 #frame {display: none;}
 

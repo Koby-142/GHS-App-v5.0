@@ -86,7 +86,8 @@
         <div class="content-feed">
         {{#each this}}
 
-        <div onclick="responsiveVoice.speak('{{description}} by {{by}}');" class="content-card lazyload">
+        <div class="content-card lazyload" onclick="imageOpen();document.getElementById('popupImageContainer').innerHTML = '{{imageUrl}}';" >
+            
             <img class="content-badge" src="Badges/{{badge}}">
             <div class="right-content">
                 <h3>{{by}}</h3>
@@ -126,6 +127,25 @@
         </div>
     </div>
 
+    <!---------------------Image Popup---------------------->
+<div id="popupImageWrapper">
+    <div class="vivify fadeInRight" id="popupImageContainer">
+      
+        </div>
+        <div class="image-close">
+            <button onclick="imageClose();document.getElementById('popupImageContainer').innerHTML = '';"><i class="material-icons">close</i></button>
+        </div>
+</div>
+
+
+<script>
+function imageClose(){
+    document.getElementById('popupImageWrapper').style.display = "none";
+}
+function imageOpen(){
+    document.getElementById('popupImageWrapper').style.display = "block";
+}
+</script>
     <!----------------------pullup Iframe-------------------->
 
     <div class="popup-frame" id="pullup-frame">

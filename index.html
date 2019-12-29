@@ -75,13 +75,16 @@
     <div class="content-feed">
     {{#each this}}
 
-    <div class="content-card lazyload" onclick="imageOpen();document.getElementById('popupImageContainer').innerHTML = '{{imageUrl}}';" >
+    <div class="content-card lazyload"  >
         
         <img class="content-badge" src="Badges/{{badge}}">
         <div class="right-content">
             <h3>{{by}}</h3>
             <p>{{description}}</p>
-                {{{imageUrl}}}
+            <div id="j{{id}}" onclick="document.getElementById('j{{id}}').innerHTML = '{{imageUrl}}'">
+                <a><img src="assets/taptoload.svg"></a> 
+            </div>
+              
         </div>
        
     </div>

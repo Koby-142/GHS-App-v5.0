@@ -10,6 +10,11 @@
     <!-----------------CSS------------------->
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="vivify.min.css">
+
+       <!---------------------Waves Effect----------------------->
+
+       <link href="https://cdn.rawgit.com/mladenplavsic/css-ripple-effect/35c35541/dist/ripple.min.css" rel="stylesheet"/>
+
     <!---------------------No Robots----------------------->
 
     
@@ -28,9 +33,7 @@
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
      
- <!-- cdnjs -->
- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+
     <!--------------------Stories API Endpoint-------------------->
 
     <script type="text/javascript">
@@ -75,13 +78,13 @@
     <div class="content-feed">
     {{#each this}}
 
-    <div class="content-card lazyload"  >
+    <div class="content-card ripple "  onclick="document.getElementById('j{{id}}').innerHTML = '{{imageUrl}}'" >
         
         <img class="content-badge" src="Badges/{{badge}}">
         <div class="right-content">
             <h3>{{by}}</h3>
             <p>{{description}}</p>
-            <div id="j{{id}}" onclick="document.getElementById('j{{id}}').innerHTML = '{{imageUrl}}'">
+            <div id="j{{id}}" >
                 <a><img src="assets/taptoload.svg"></a> 
             </div>
               
@@ -274,7 +277,7 @@ function imageOpen(){
             document.getElementById("story-close").style.display = "none";
         }
     </script>
-
+   
 </body>
 
 </html>

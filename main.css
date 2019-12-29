@@ -117,7 +117,7 @@ label>img:active {}
 
 /*------------------------------------Content Feed-------------------------------------------*/
 
-.content-card {margin: auto; width: 90%;;margin-top: 15px;border-bottom: solid 1px lightgray;padding-bottom: 15px;}
+.content-card {margin: auto; width: 90%;;padding-top:15px;border-bottom: solid 1px lightgray;padding-bottom: 15px;}
 
 .content-feed {margin-bottom: 55px;}
 

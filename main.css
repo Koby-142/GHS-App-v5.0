@@ -137,7 +137,7 @@ label>img:active {}
 
 /*----------------------------------Pop Up Frame-----------------------------------------*/
 
-.inject-frame {position: fixed; top: 55px; left: 0px; width: 100%; height:89vh; background-color: white;border: none;z-index: 100;}
+.inject-frame {position: fixed; top: 0px; left: 0px; width: 100%; height:95vh; background-color: white;border: none;z-index: 100;padding-top: 55px;;}
 
 #frame {display: none;}
 
@@ -147,6 +147,8 @@ label>img:active {}
   .iframe-loader > div{margin: auto; width: 100px;margin-top: 35vh;}
 
   .iframe-loader > div > img {width: 100%;}
+
+  .page-indicator {width: 50px; height: 50px; background-color: #012395;position: fixed; bottom: 0px;right: 150px;}
 
 /*---------------------------------Live Frame-------------------------------------*/
 

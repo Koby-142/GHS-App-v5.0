@@ -21,14 +21,16 @@
     <!--------------------Material Icons------------------------->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!--------------------Jquery / Handlebars CDN /---------------->
+    <!--------------------Jquery / Handlebars CDN / Lazy Load---------------->
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js">
     </script>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
+     
+ <!-- cdnjs -->
+ <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+ <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
     <!--------------------Stories API Endpoint-------------------->
 
     <script type="text/javascript">
@@ -66,6 +68,29 @@
     </div>
     </script>
 
+<!-------------------Navigation Template------------------->
+
+<script id="item-template2" type="text/x-handlebars-template">
+
+    <div class="content-feed">
+    {{#each this}}
+
+    <div class="content-card lazyload" onclick="imageOpen();document.getElementById('popupImageContainer').innerHTML = '{{imageUrl}}';" >
+        
+        <img class="content-badge" src="Badges/{{badge}}">
+        <div class="right-content">
+            <h3>{{by}}</h3>
+            <p>{{description}}</p>
+                {{{imageUrl}}}
+        </div>
+       
+    </div>
+
+{{/each}}
+
+    </div>
+</script>
+
     <!-------------------Navigation API Endpoint--------------->
 
 
@@ -77,30 +102,11 @@
                 $('#items2').html(template(data.data2))
             })
         })
+
+     
     </script>
 
-    <!-------------------Navigation Template------------------->
-
-    <script id="item-template2" type="text/x-handlebars-template">
-
-        <div class="content-feed">
-        {{#each this}}
-
-        <div class="content-card lazyload" onclick="imageOpen();document.getElementById('popupImageContainer').innerHTML = '{{imageUrl}}';" >
-            
-            <img class="content-badge" src="Badges/{{badge}}">
-            <div class="right-content">
-                <h3>{{by}}</h3>
-                <p>{{description}}</p>
-                    {{{imageUrl}}}
-            </div>
-           
-        </div>
-
-    {{/each}}
-
-        </div>
-    </script>
+    
 </head>
 
 <body>
@@ -175,7 +181,7 @@ function imageOpen(){
     <!---------------------Grouped Button------------------->
 
     <div class="grouped-buttons">
-        <div class="group-wrapper ">
+        <div on class="group-wrapper ">
             <a href="#pullup-frame">
                 <button class="group-btn left-group"
                     onclick="document.getElementById('popup-text').innerHTML='Senior Home';document.getElementById('pullup-inject').src='https://ghsappv5.netlify.com/seniorhome.html';">Senior
@@ -198,7 +204,13 @@ function imageOpen(){
     <!----------------------Content Feed-------------------->
 
     <div id="items2"></div>
-
+<script>
+   $(".lazy").lazy({
+        effect: "fadeIn",
+        effectTime: 5000,
+        threshold: 0
+    });
+</script>
     <!----------------------Popup Iframe-------------------->
 
     <div class="popup-frame" id="frame">

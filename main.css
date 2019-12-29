@@ -123,7 +123,7 @@ label>img:active {}
 
 .right-content {width: 80%;margin-left: 60px;}
 
-.right-content > div > a > img {width: 100%;border-radius: 10px;margin-top: 10px;height: 160px; object-fit: cover;border: solid 1px lightgray;}
+.right-content > div > a > img {width: 100%;border-radius: 10px;margin-top: 10px;height: object-fit: cover;border: solid 1px lightgray;}
 
 .right-content > div > iframe {width: 100%;border-radius: 10px;margin-top: 10px;height: 160px; object-fit: cover;border: solid 1px lightgray;}
 

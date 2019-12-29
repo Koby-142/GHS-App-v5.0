@@ -133,7 +133,7 @@ label>img:active {}
 
 .right-content > h3 {margin: 0px;font-size: 15px;}
 
-.content-badge {float: left;width: 50px;border: solid 1px lightgray;border-radius: 50px;margin-left: -5px;}
+.content-badge {float: left;width: 50px;border: solid 1px lightgray;border-radius: 50px;}
 
 .right-content > iframe {width: 100% !important;height: 150px;border-radius: 10px;margin-top: 10px;}
 

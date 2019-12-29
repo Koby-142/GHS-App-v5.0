@@ -148,7 +148,7 @@ label>img:active {}
 
   .iframe-loader > div > img {width: 100%;}
 
-  .page-indicator {width: 50px; height: 50px; background-color: #012395;position: fixed; bottom: 0px;right: 150px;}
+  .page-indicator {width: 50px; height: 50px; background-color: #012395;position: fixed; bottom: 0px;right: 100px;}
 
 /*---------------------------------Live Frame-------------------------------------*/
 

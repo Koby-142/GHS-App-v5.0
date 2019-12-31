@@ -167,7 +167,7 @@ label>img:active {}
 
 #playbackindicator {position: sticky;top: 0px; z-index: 150;background-color: white;}
 
-#playbacktext {transition: 0.2s ease;border-top: solid 1px lightgray;}
+#playbacktext {transition: 0.2s ease;}
 
 #playbacktext.active {margin-left: 150px;}
 

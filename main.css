@@ -115,6 +115,8 @@ label>img:active {}
 
 .grouped-buttons {position: sticky; top: 55px;width: 100%;z-index: 50;}
 
+
+
 /*------------------------------------Content Feed-------------------------------------------*/
 
 .content-card {margin: auto; width: 90%;;padding-top:15px;border-bottom: solid 1px lightgray;padding-bottom: 15px;}
@@ -153,6 +155,7 @@ label>img:active {}
   .iframe-loader > div > img {width: 100%;}
 
   .page-indicator {width: 50px; height: 50px; background-color: #012395;position: fixed; bottom: 0px;right: 100px;}
+
 
 /*---------------------------------Live Frame-------------------------------------*/
 

@@ -7,6 +7,53 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0" />
 
+    <!--------------------Jquery / Handlebars CDN / Lazy Load---------------->
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js">
+    </script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-------------------Navigation Template------------------->
+
+<script id="item-template2" type="text/x-handlebars-template">
+
+    <div class="content-feed">
+    {{#each this}}
+
+    <div class="content-card "  onclick="document.getElementById('j{{id}}').innerHTML = '{{imageUrl}}'" >
+        
+        <img class="content-badge" src="Badges/{{link}}">
+        <div class="right-content">
+            <h3>{{title}}</h3>
+            <p>{{description}}</p>
+            <div id="j{{id}}" >
+               
+            </div>
+              
+        </div>
+       
+    </div>
+
+{{/each}}
+
+    </div>
+</script>
+
+    <!-------------------Navigation API Endpoint--------------->
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/ghsApp/data1', function (
+                data) {
+                var template = Handlebars.compile($('#item-template2').html())
+                $('#items2').html(template(data.data1))
+            })
+        })
+
+     
+    </script>
 </head>
 
 <body>
@@ -17,21 +64,22 @@
         </div>
     </div>
 
-    <iframe onload="loaded()" loading="lazy" class="live-frame"
+    <iframe id="playback" onload="loaded()" loading="lazy" class="live-frame"
         src="https://c.themediacdn.com/embed/media/O7sBCQ/OqvzSehCsA1/mrLrvlwsOOb_5?wmode=opaque"
         allowfullscreen></iframe>
 
-    <div class="content-card lazyload">
+    <div class="content-card lazyload" id="playbackindicator">
         <img class="content-badge" src="Badges/WGTV.svg">
-        <div class="right-content">
-            <h3>WGTV Broadcasting</h3>
-            <p>Presented By WGTV & Admiralnation</p>
+        <div class="right-content" id="playbacktext">
+            <h3>GHS Live Games</h3>
+            <p>By WGTV & Admiralnation</p>
             <a href="">
                 <button class="mini-button">Give Feedback</button>
             </a>
         </div>
 
     </div>
+    <div id="items2" class="media-feed"></div>
     <div class="footer-badge">
         <div>
        <p><strong>GHS</strong>App</p>
@@ -42,6 +90,27 @@
             document.getElementById("loader").style.display = "none";
         }
     </script>
+    <script>
+        $(window).scroll(function () {
+          var scroll = $(window).scrollTop();
+          if (scroll > 0) {
+            $("#playback").addClass("scrolled");
+          } else {
+            $("#playback").removeClass("scrolled");
+          }
+        });
+      </script>
+       <script>
+        $(window).scroll(function () {
+          var scroll = $(window).scrollTop();
+          if (scroll > 0) {
+            $("#playbacktext").addClass("active");
+          } else {
+            $("#playbacktext").removeClass("active");
+          }
+        });
+      </script>
+      
 </body>
 
 </html>

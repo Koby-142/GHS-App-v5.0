@@ -236,8 +236,22 @@ label>img:active {}
 
 .page-information > h3 {text-align: center;;}
 
-.page-information > p {margin-top: -10px;}
+.page-information > p {margin-top: -10px;text-align: center;}
 
 .page-information-button {margin: auto; width: 110px;margin-top: -5px;}
 
 .page-information-button > button {background-color: white;border: solid 1px lightgray; padding-top: 7px; padding-bottom: 7px;border-radius: 5px;}
+
+/*--------------------------------------Meal Menu------------------------------------*/
+
+.menu-viewer > #lunch {margin: auto; width: 100%;padding-top: 15px;display: none;}
+
+.menu-viewer > #lunch:target {display: block;}
+
+#lunch > img {width: 100%;;}
+
+.menu-viewer > #breakfast {margin: auto; width: 100%;padding-top: 15px;display: none;}
+
+.menu-viewer > #breakfast:target {display: block;}
+
+#breakfast > img {width: 100%;;}

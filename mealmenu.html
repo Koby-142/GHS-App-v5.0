@@ -11,6 +11,13 @@
 </head>
 
 <body style="border-top: solid 1px lightgray;">
+    <div class="iframe-loader" id="loader">
+        <div>
+            <img
+                src="https://camo.githubusercontent.com/a1a81b0529517027d364ee8432cf9a8bd309542a/687474703a2f2f692e696d6775722e636f6d2f56446449444f522e676966">
+        </div>
+    </div>
+
     <div class="grouped-buttons" style="top: 0px; position: fixed;">
         <div class="group-wrapper " style="width: 85%;"> 
             <a href="#lunch">
@@ -25,15 +32,19 @@
             </a>
         </div>
     </div>
-    <div class="menu-viewer">
+    <div  class="menu-viewer">
         <div id="lunch" class="vivify fadeIn">
-            <img src="/Assets/january meal menu.png">
+            <img onload="loaded()" src="/Assets/january meal menu.png">
         </div>
 
         <div id="breakfast" class="vivify fadeIn">
             <img src="/Assets/january breakfast.png">
         </div>
     </div>
-
+    <script>
+        function loaded() {
+            document.getElementById("loader").style.display = "none";
+        }
+    </script>
 </body>
 </html>

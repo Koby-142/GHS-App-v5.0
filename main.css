@@ -56,6 +56,8 @@ label>img:active {}
 
 .story-wrapper {width: 121px;height: 188px;background-size: cover;display: inline-block;margin-left: 12px;}
 
+
+
 .stories-container {margin-top: 56px;overflow: scroll;white-space: nowrap;}
 
 .story-wrapper > p {height: 50px;text-overflow: ellipsis; overflow: hidden;margin:0px;white-space: normal;font-size: 14px;width: 100%;margin-left: 5px;margin-top: 5px;color: white; z-index: 15;}
@@ -140,6 +142,8 @@ label>img:active {}
 .right-content > iframe {width: 100% !important;height: 150px;border-radius: 10px;margin-top: 10px;}
 
 .ttoplay {border:solid 1px lightgray;margin-top: 10px; border-radius: 2px;;}
+
+.content-tap-indicator {transition: 0.1s ease;;}
 
 .content-tap-indicator:active {opacity: 0;}
 

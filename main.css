@@ -139,7 +139,7 @@ label>img:active {}
 
 .right-content > div > a {pointer-events: none;}
 
-.right-content > p {margin: 0px;margin-top: 5px;font-size: 14px;}
+.right-content > p {margin: 0px;margin-top: 5px;font-size: 14px;white-space: pre-wrap;}
 
 .right-content > h3 {margin: 0px;font-size: 15px;}
 
@@ -157,7 +157,7 @@ label>img:active {}
 
 .content-tap-indicator > p {font-size: 13px;padding-top: 5px;}
 
-
+.home-overflow {overflow: scroll; white-space: nowrap; height: 100vh;}
 
 /*----------------------------------Pop Up Frame-----------------------------------------*/
 

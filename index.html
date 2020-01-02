@@ -134,6 +134,7 @@
 
     </div>
 </a>
+<div class="home-overflow">
     <!---------------------Stories------------------------>
 
     <div id="items">
@@ -144,6 +145,18 @@
         </div>
     </div>
 
+       <!----------------------Content Feed-------------------->
+
+       <div id="items2"></div>
+       <script>
+          $(".lazy").lazy({
+               effect: "fadeIn",
+               effectTime: 5000,
+               threshold: 0
+           });
+       </script>
+
+</div>
     <!---------------------Image Popup---------------------->
 <div id="popupImageWrapper">
     <div class="vivify fadeInRight" id="popupImageContainer">
@@ -211,16 +224,7 @@ function imageOpen(){
     </div>
 
 
-    <!----------------------Content Feed-------------------->
-
-    <div id="items2"></div>
-<script>
-   $(".lazy").lazy({
-        effect: "fadeIn",
-        effectTime: 5000,
-        threshold: 0
-    });
-</script>
+ 
     <!----------------------Popup Iframe-------------------->
 
     <div class="popup-frame" id="frame">

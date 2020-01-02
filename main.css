@@ -141,7 +141,7 @@ label>img:active {}
 
 .ttoplay {border:solid 1px lightgray;margin-top: 10px; border-radius: 2px;;}
 
-.content-tap-indicator:active {display: none;;}
+.content-tap-indicator:active {opacity: 0;}
 
 .content-tap-indicator > i  {float: left;}
 

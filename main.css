@@ -230,3 +230,14 @@ label>img:active {}
 .spacer-wide {width: 12px;display: inline-block;}
 
 
+/*------------------------------------------Page INfo-------------------------------*/
+
+.page-information {margin: auto; width: 90%;margin-top: 35vh;}
+
+.page-information > h3 {text-align: center;;}
+
+.page-information > p {margin-top: -10px;}
+
+.page-information-button {margin: auto; width: 110px;margin-top: -5px;}
+
+.page-information-button > button {background-color: white;border: solid 1px lightgray; padding-top: 7px; padding-bottom: 7px;border-radius: 5px;}

@@ -3,22 +3,28 @@
 
 <head>
 <link rel="stylesheet" href="main.css">
+
+    <!-----------------Prevent User Zoom---------------------->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0" />
 </head>
 
 <body>
-    <div class="iframe-loader" id="loader">
+    <div style="display:none" class="iframe-loader" id="loader">
         <div>
             <img src="https://camo.githubusercontent.com/a1a81b0529517027d364ee8432cf9a8bd309542a/687474703a2f2f692e696d6775722e636f6d2f56446449444f522e676966">
         </div>
     </div>
-    <iframe onload="loaded()" loading="lazy" id="month"
-    src="https://261985.stiinformationnow.com/InformationNow/Login.aspx?ReturnUrl=%2fInformationNow%2fMobile%2fGradeBook.List.aspx"
-    style="border-width:0;position: absolute; top: 0px;width:100%; height:100vh;left: 0px;" frameborder="0"
-    scrolling="no"></iframe>
-    <script>
-      function loaded(){
-            document.getElementById("loader").style.display="none";
-        }
-    </script>
+  <div class="page-information">
+<h3>Check Your Grades</h3>
+<p>Warning, after opening you may not be able to return to the home screen due to limitations of Chalkable</p>
+<a target="_blank" onclick="loadactive()" href="https://261985.stiinformationnow.com/InformationNow/Login.aspx?ReturnUrl=%2fInformationNow%2fMobile%2fGradeBook.List.aspx"><div class="page-information-button"><button>Start Chalkable</button></div></a>
+
+  </div>
+  <script>
+    function loadactive(){
+          document.getElementById("loader").style.display="block";
+      }
+  </script>
 </body>
 </html>

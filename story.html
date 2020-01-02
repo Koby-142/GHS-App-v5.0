@@ -29,7 +29,7 @@
             $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/ghsApp/data2', function (
                 data) {
                 var template = Handlebars.compile($('#item-template').html())
-                $('#items').html(template(data.data2))
+                $('#storyopened').html(template(data.data2))
             })
         })
     </script>
@@ -78,7 +78,7 @@
 <body>
 
     <div class="story-view">
-        <div id="items"></div>
+        <div id="istoryopened"></div>
     </div>
 
     <script>

@@ -84,6 +84,10 @@
         <div class="right-content">
             <h3>{{title}}</h3>
             <p>{{description}}</p>
+            <div class="content-tap-indicator">
+                <i class="material-icons">keyboard_arrow_down</i>
+                <p>Tap To Expand</p>
+            </div>
             <div id="j{{id}}" >
                
             </div>
@@ -277,7 +281,17 @@ function imageOpen(){
             document.getElementById("story-close").style.display = "none";
         }
     </script>
-   
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script src="/jquery.firstVisitPopup.min.js"></script>
+<script>
+    $(function () {
+        $('#my-welcome-message').firstVisitPopup({
+            cookieName : 'homepage',
+            showAgainSelector: '#show-message'
+        });
+    });
+</script>
 </body>
 
 </html>

@@ -119,15 +119,15 @@ label>img:active {}
 
 /*------------------------------------Content Feed-------------------------------------------*/
 
-.content-card {margin: auto; width: 90%;;padding-top:15px;border-bottom: solid 1px lightgray;padding-bottom: 15px;}
+.content-card {margin: auto; width: 90%;;padding-top:15px;border-bottom: solid 1px lightgray;padding-bottom: 15px;transform: rotate(180deg);}
 
-.content-feed {margin-bottom: 55px;}
+.content-feed {margin-bottom: 55px;transform: rotate(180deg);}
 
 .right-content {width: 80%;margin-left: 60px;}
 
 .right-content > div > a > img {width: 100%;border-radius: 10px;margin-top: 10px;height: object-fit: cover;border: solid 1px lightgray;}
 
-.right-content > div > iframe {width: 100%;border-radius: 10px;margin-top: 10px;height: 160px; object-fit: cover;border: solid 1px lightgray;}
+.right-content > div > iframe {width: 100%;margin-top: 10px;height: 160px; object-fit: cover;border: solid 1px lightgray;}
 
 .right-content > div > a {pointer-events: none;}
 
@@ -138,6 +138,16 @@ label>img:active {}
 .content-badge {float: left;width: 50px;border: solid 1px lightgray;border-radius: 50px;}
 
 .right-content > iframe {width: 100% !important;height: 150px;border-radius: 10px;margin-top: 10px;}
+
+.ttoplay {border:solid 1px lightgray;margin-top: 10px; border-radius: 2px;;}
+
+.content-tap-indicator:active {display: none;;}
+
+.content-tap-indicator > i  {float: left;}
+
+.content-tap-indicator > p {font-size: 13px;padding-top: 5px;}
+
+
 
 /*----------------------------------Pop Up Frame-----------------------------------------*/
 

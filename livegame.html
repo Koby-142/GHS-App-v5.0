@@ -16,6 +16,9 @@
 
     <!-------------------Navigation Template------------------->
 
+        <!--------------------Material Icons------------------------->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 <script id="item-template2" type="text/x-handlebars-template">
 
     <div class="content-feed">
@@ -28,11 +31,16 @@
             <h3>{{title}}</h3>
             <p>{{description}}</p>
             <div id="j{{id}}" >
-               
+             <div class="video-indicator">
+                 <img class="ttoplay" src="/Assets/tap to play.svg">
+             </div>  
             </div>
               
         </div>
-       
+       <div class="content-tap-indicator">
+           <i class="material-icons">play_circle_outline</i>
+           <p>Tap To Watch</p>
+       </div>
     </div>
 
 {{/each}}
@@ -45,10 +53,10 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/ghsApp/data1', function (
+            $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/ghsApp/data4', function (
                 data) {
                 var template = Handlebars.compile($('#item-template2').html())
-                $('#items2').html(template(data.data1))
+                $('#items2').html(template(data.data4))
             })
         })
 
@@ -68,7 +76,7 @@
         src="https://c.themediacdn.com/embed/media/O7sBCQ/OqvzSehCsA1/mrLrvlwsOOb_5?wmode=opaque"
         allowfullscreen></iframe>
 
-    <div class="content-card lazyload" id="playbackindicator">
+    <div class="content-card lazyload" style="transform: rotate(0deg);" id="playbackindicator">
         <img class="content-badge" src="Badges/WGTV.svg">
         <div class="right-content" id="playbacktext">
             <h3>GHS Live Games</h3>

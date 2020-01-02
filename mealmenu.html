@@ -18,7 +18,7 @@
         </div>
     </div>
 
-    <div class="grouped-buttons" style="top: 0px; position: fixed;">
+    <div class="grouped-buttons" style="top: 0px; position: fixed;background-color: white;;">
         <div class="group-wrapper " style="width: 85%;"> 
             <a href="#lunch">
                 <button style="width: 50%;margin-left: 6px;" class="group-btn left-group"
@@ -31,6 +31,13 @@
                   >Breakfast</button>
             </a>
         </div>
+        
+        <p style="text-align: center;font-size: 13px;margin-top: 5px;margin-bottom: 5px;">Date <span id="datetime"></span></p>
+
+        <script>
+        var dt = new Date();
+        document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+        </script>
     </div>
     <div  class="menu-viewer">
         <div id="lunch" class="vivify fadeIn">

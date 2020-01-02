@@ -244,13 +244,13 @@ label>img:active {}
 
 /*--------------------------------------Meal Menu------------------------------------*/
 
-.menu-viewer > #lunch {margin: auto; width: 100%;padding-top: 15px;display: none;}
+.menu-viewer > #lunch {margin: auto; width: 100%;padding-top: 30px;display: none;}
 
 .menu-viewer > #lunch:target {display: block;}
 
 #lunch > img {width: 100%;;}
 
-.menu-viewer > #breakfast {margin: auto; width: 100%;padding-top: 15px;display: none;}
+.menu-viewer > #breakfast {margin: auto; width: 100%;padding-top: 30px;display: none;}
 
 .menu-viewer > #breakfast:target {display: block;}
 

@@ -91,6 +91,8 @@ label>img:active {}
 .story-loader-items > div {margin: auto;width: 100px;margin-top: 80px;}
 .story-loader-items> div > img {width: 100%;}
 
+
+
 /*------------------------------------Opened Stories------------------------------------------*/
 
 .story-opened-image > img { width: 100%; top: 0px;height: 100vh;object-fit: cover;}
@@ -105,7 +107,17 @@ label>img:active {}
 
 .story-grid > a > button {width: 100%; background-color: transparent;height: 100vh;margin-bottom: -100%;position: relative; z-index: 50;margin-top: -250%;border: none;}
 
+.end-story {position: relative; z-index: 200;}
+
 .end-story > a > button {width: 100%; background-color: transparent;height: 100vh;margin-top: -100vh;border: none;;}
+
+.end-story > a > button:focus {outline: none;;}
+
+.story-tap-indicator {position: fixed; top: 0px; width: 100%; height: 100%;filter: saturate(0);}
+
+.tap-wrapper > img {width: 100px;border-radius: 50px;opacity: 0.6;}
+
+.tap-wrapper {margin: auto; width: 100px;margin-top: 40vh;filter: brightness(1.5);}
 
 /*------------------------------------Group-Buttons--------------------------------------------*/
 

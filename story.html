@@ -45,7 +45,8 @@
                <button></button>
             </a>
         </div>
-<div class="story-opened" style="scroll-snap-align:start" id="story{{id}}">
+<div class="story-opened" style=" scroll-snap-align: start;
+scroll-snap-align: center;" id="story{{id}}">
    
     <div class="story-text">
         <div class="content-card" style="transform: rotate(0deg);">
@@ -83,10 +84,9 @@
    
 </div>
     <div class="story-view">
-        <div style="scroll-snap-type: y mandatory;
-        &.proximity {
-                scroll-snap-type: y proximity;
-        } overflow:scroll;" id="items"></div>
+        <div style="overflow-y: scroll;
+        white-space: nowrap;
+        scroll-snap-type: y mandatory;" id="items"></div>
     </div>
 
     <script>

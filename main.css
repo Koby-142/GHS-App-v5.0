@@ -115,7 +115,7 @@ label>img:active {}
 
 .end-story > a > button:focus {outline: none;;}
 
-.story-tap-indicator {position: fixed; top: 0px; width: 100%; height: 100%;filter: saturate(0);}
+.story-tap-indicator {position: absolute; top: 0px; width: 100%; height: 100%;filter: saturate(0);}
 
 .tap-wrapper > img {width: 100px;border-radius: 50px;opacity: 0.6;}
 

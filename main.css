@@ -99,6 +99,8 @@ label>img:active {}
 
 .story-opened-image {height: 100vh;}
 
+
+
 .story-text {background-color: rgba(0, 0, 0, 0.445);position: absolute;;}
 
 .story-text > .content-card > .right-content {color: white;;}

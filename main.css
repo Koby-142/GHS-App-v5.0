@@ -197,7 +197,7 @@ label>img:active {}
 
 #playback {width: 100%;transition: 0.15s ease;}
 
-#playback.scrolled {width: 150px;position: fixed;height: 102px;top: 0px; left: 0px;;z-index: 151;}
+#playback.scrolled {width: 150px;position: fixed;height: 80px;top: 0px; left: 0px;;z-index: 151;}
 
 #playbackindicator {position: sticky;top: 0px; z-index: 150;background-color: white;}
 

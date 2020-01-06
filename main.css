@@ -215,7 +215,7 @@ label>img:active {}
 
 details > summary:focus {outline: none;}
 
-.new-container {margin: auto;width: 94%;}
+.new-container {margin: auto;width: 94%;margin-top: 7px;}
 
 .new-container > details {margin-top: 60px;border: solid 1px lightgray;border-radius: 10px;}
 

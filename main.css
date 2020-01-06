@@ -215,7 +215,7 @@ label>img:active {}
 
 details > summary:focus {outline: none;}
 
-.new-container {margin: auto;width: 94%;margin-top: 7px;}
+.new-container {margin: auto;width: 94%;margin-top: 12px;}
 
 .new-container > details {margin-top: 60px;border: solid 1px lightgray;border-radius: 10px;}
 
@@ -230,6 +230,8 @@ details:focus {outline: none;}
 .new-view > div > p {white-space: pre-wrap;margin-top: 5px;font-size: 14px;}
 
 .new-view > div > h3 {white-space: pre-wrap;margin-bottom: -3px;font-size: 15px;}
+
+details > summary {list-style-type: none;}
 
 
 /*--------------------------------Pull Up Frame----------------------------------*/

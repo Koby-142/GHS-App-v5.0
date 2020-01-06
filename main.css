@@ -205,6 +205,33 @@ label>img:active {}
 
 #playbacktext.active {margin-left: 150px;width: 50%;}
 
+/*-------------------------------New Stuff-------------------------------------*/
+
+.new-container > details > summary {width: 100%;}
+
+.new-view {margin: auto; width: 90%;}
+
+.new-container > details {margin-bottom: -45px;}
+
+details > summary:focus {outline: none;}
+
+.new-container {margin: auto;width: 94%;}
+
+.new-container > details {margin-top: 60px;border: solid 1px lightgray;border-radius: 10px;}
+
+.new-text-container {float: left;}
+
+summary{list-style-type: none;}
+
+details:focus {outline: none;}
+
+.new-view > div {}
+
+.new-view > div > p {white-space: pre-wrap;margin-top: 5px;font-size: 14px;}
+
+.new-view > div > h3 {white-space: pre-wrap;margin-bottom: -3px;font-size: 15px;}
+
+
 /*--------------------------------Pull Up Frame----------------------------------*/
 
 #pullup-frame {display: none;position: fixed; top: 0px;z-index: 700;width: 100%; height: 100vh;}

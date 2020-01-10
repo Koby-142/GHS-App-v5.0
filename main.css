@@ -155,7 +155,7 @@ label>img:active {}
 
 .right-content > div > iframe {width: 100%;margin-top: 10px;height: 160px; object-fit: cover;border: solid 1px lightgray;}
 
-.right-content > div > a {}
+.right-content > div > a {pointer-events: none;}
 
 .right-content > p {margin: 0px;margin-top: 5px;font-size: 14px;white-space: pre-wrap;}
 

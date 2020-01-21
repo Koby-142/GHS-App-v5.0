@@ -151,7 +151,7 @@ label>img:active {}
 
 .right-content > div > a > img {width: 100%;border-radius: 10px;margin-top: 10px;height: object-fit: cover;border: solid 1px lightgray;}
 
-.right-content > div > a > img:hover {position: fixed; left: 0px top:0px;width:100%;z-index:500;;}
+.right-content > div > a > img:focus {position: fixed; left: 0px top:0px;width:100%;z-index:500;;}
 
 .right-content > div > iframe {width: 100%;margin-top: 10px;height: 160px; object-fit: cover;border: solid 1px lightgray;}
 

@@ -1,0 +1,332 @@
+<!--
+    GHS App | v5.0
+    Developed By Jacoby Broadnax
+    For Gulfport High School
+-->
+<!DOCTYPE html>
+
+<head>
+    <title>GHS App | v5.0</title>
+    <!-----------------CSS------------------->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="vivify.min.css">
+
+       <!---------------------Waves Effect----------------------->
+
+       <link href="https://cdn.rawgit.com/mladenplavsic/css-ripple-effect/35c35541/dist/ripple.min.css" rel="stylesheet"/>
+
+    <!---------------------No Robots----------------------->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    
+    <meta name="robots" content="noindex" />
+
+    <!-----------------Prevent User Zoom---------------------->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0" />
+    <!--------------------Material Icons------------------------->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--------------------Jquery / Handlebars CDN / Lazy Load---------------->
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js">
+    </script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     
+
+    <!--------------------Stories API Endpoint-------------------->
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/ghsApp/data2', function (
+                data) {
+                var template = Handlebars.compile($('#item-template').html())
+                $('#items').html(template(data.data2))
+            })
+        })
+    </script>
+
+    <!------------------Story Template------------------------>
+
+    <script id="item-template" type="text/x-handlebars-template">
+
+        <div class="stories-container"id="story">
+        {{#each this}}
+<a href="#story-frame" style="text-decoration: none;">
+        <div  class="story-wrapper vivify fadeIn delay-{{id}}00" onclick="document.getElementById('story-inject').src='https://ghsappv5.netlify.com/story.html#story{{id}}';">
+            <img class="story-image" loading="lazy" src="images/{{imageUrl}}">
+            <img class="story-icon vivify pulsate infinite delay-{{id}}00" src="badges/{{badge}}">
+            <h4>{{name}}</h4>
+            <p>{{description}}</p>
+        </div>
+    </a>
+    {{/each}}
+
+    <div class="story-wrapper"  style="display: none;">
+        <img class="story-image" src="Images/Anouncements.jpg">
+        <img style="border: none" class="story-icon " src="Assets/Add.svg">
+        <h4>Create Story</h4>
+        <p>Tap Here To Submit Your Story For Review</p>
+    </div>
+    </div>
+    </script>
+
+<!-------------------Navigation Template------------------->
+
+<script id="item-template2" type="text/x-handlebars-template">
+
+    <div class="content-feed">
+    {{#each this}}
+
+    <div class="content-card "  onclick="document.getElementById('j{{id}}').innerHTML = '{{imageUrl}}'" >
+        
+        <img class="content-badge" src="Badges/{{link}}">
+        <div class="right-content">
+            <h3>{{title}}</h3>
+            <p>{{description}}</p>
+            <div class="content-tap-indicator">
+                <i class="material-icons">keyboard_arrow_down</i>
+                <p>Tap To Expand</p>
+            </div>
+            <div class="image-container" id="j{{id}}" >
+               
+            </div>
+              
+        </div>
+       
+    </div>
+
+{{/each}}
+
+    </div>
+</script>
+
+    <!-------------------Navigation API Endpoint--------------->
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/ghsApp/data1', function (
+                data) {
+                var template = Handlebars.compile($('#item-template2').html())
+                $('#items2').html(template(data.data1))
+            })
+        })
+
+     
+    </script>
+
+    
+</head>
+
+<body class="vivify fadeIn delay-200">
+
+    <!------------------Top-Navigation-------------->
+    <div class="navigation-cover">
+
+    </div>
+    <a href="index.html">
+    <div class="top-navigation">
+
+        <div class="logo-container">
+            <img src="branding/New GSD Logo Micro 512px.svg">
+        </div>
+
+    </div>
+</a>
+<div class="home-overflow">
+    <div class="new-container vivify fadeIn delay-400" style="display: none;">
+        <details open>
+            <summary>  
+                <div class="new-view" style="margin-top: 0px;">  
+                    <div >
+                        <h3>What's New</h3>
+                        <p>GHS App v5.0</p>
+                    </div>
+                
+                </div>
+            </summary>
+            <div class="new-view">
+                <div style="border-top: solid 1px lightgray;" class="vivify fadeIn ">
+                    <h3>Senior Home</h3>
+                    <p>A centralized place for all seniors with events, news and important dates.</p>
+                </div>
+                <div class="vivify fadeIn delay-100">
+                    <h3>GHS App Stories | Under Development</h3>
+                    <p>Shining a spotlight on students who've learned a new skill, helped others, created something new, or did something exceptional.</p>
+                </div>
+                <div class="vivify fadeIn delay-200">
+                    <h3>Media Section</h3>
+                    <p>An area dedicated all forms of media including video, art, and live games by WGTV. </p>
+                </div>
+            </div>
+        </details>
+    </div>
+    <!---------------------Stories------------------------>
+
+    <div id="items">
+        <div class="story-loader-items">
+            <div><img
+                    src="https://camo.githubusercontent.com/a1a81b0529517027d364ee8432cf9a8bd309542a/687474703a2f2f692e696d6775722e636f6d2f56446449444f522e676966">
+            </div>
+        </div>
+    </div>
+
+    
+    <!---------------------Grouped Button------------------->
+    
+    <div class="grouped-buttons">
+        <div on class="group-wrapper ">
+            <a href="#pullup-frame">
+                <button class="group-btn left-group"
+                    onclick="document.getElementById('popup-text').innerHTML='Senior Home';document.getElementById('pullup-inject').src='https://ghsappv5.netlify.com/seniorhome.html';">Senior
+                    Home</button>
+            </a>
+            <a href="#pullup-frame">
+                <button class="group-btn"
+                    onclick="document.getElementById('popup-text').innerHTML='Media';document.getElementById('pullup-inject').src='/livegame.html';">Media</button>
+            </a>
+            <a href="#pullup-frame">
+                <button class="group-btn right-group"
+                    onclick="document.getElementById('popup-text').innerHTML='Kahoot!';document.getElementById('pullup-inject').src='https://ghsappv5.netlify.com/kahoot.html';">Play
+                    Kahoot!</button>
+            </a>
+        </div>
+    </div>
+
+
+       <!----------------------Content Feed-------------------->
+
+       <div id="items2"></div>
+       <script>
+          $(".lazy").lazy({
+               effect: "fadeIn",
+               effectTime: 5000,
+               threshold: 0
+           });
+       </script>
+
+</div>
+    <!---------------------Image Popup---------------------->
+<div id="popupImageWrapper">
+    <div class="vivify fadeInRight" id="popupImageContainer">
+      
+        </div>
+        <div class="image-close">
+            <button onclick="imageClose();document.getElementById('popupImageContainer').innerHTML = '';"><i class="material-icons">close</i></button>
+        </div>
+</div>
+
+
+<script>
+function imageClose(){
+    document.getElementById('popupImageWrapper').style.display = "none";
+}
+function imageOpen(){
+    document.getElementById('popupImageWrapper').style.display = "block";
+}
+</script>
+    <!----------------------pullup Iframe-------------------->
+
+    <div class="popup-frame" id="pullup-frame">
+        <a href="#">
+            <div class="popup-close">
+                <i class="material-icons">close</i>
+                <h4 id="popup-text">Live Games</h4>
+            </div>
+        </a>
+        <iframe src="" class="inject2-frame " id="pullup-inject">
+
+        </iframe>
+
+    </div>
+
+    <!----------------------Story Iframe-------------------->
+
+    <div class="popup-frame" id="story-frame">
+
+        <iframe src="https://ghsappv5.netlify.com/story.html#story1" class="inject-frame "
+            id="story-inject">
+
+        </iframe>
+
+    </div>
+
+
+ 
+    <!----------------------Popup Iframe-------------------->
+
+    <div class="popup-frame" id="frame">
+
+        <iframe src="" class="inject-frame" id="inject-frame" onload="loaded()">
+
+        </iframe>
+
+    </div>
+
+    <!----------------Bottom-Navigation-------------->
+    <div class="bottom-navigation">
+        <div class="bottom-nav-wrapper">
+            <div class="bottom-nav-button start" onclick="target();document.getElementById('inject-frame').src='mealmenu.html#lunch';">
+                <input id="nav-btn1" type="radio" name="bottom-nav">
+                <label for="nav-btn1"><img src="icons/Menu.svg"></label>
+            </div>
+            <div class="bottom-nav-button"
+                onclick="target();document.getElementById('inject-frame').src='https://ghsappv5.netlify.com/grades.html';">
+                <input id="nav-btn2" type="radio" name="bottom-nav">
+                <label for="nav-btn2"><img src="icons/Grades.svg"></label>
+            </div>
+
+            <div class="bottom-nav-button" onclick="view()">
+
+                <input id="nav-btn3" type="radio" name="bottom-nav" checked>
+                <label for="nav-btn3"><img src="icons/Home.svg"></label>
+            </div>
+
+            <div class="bottom-nav-button"
+                onclick="target();document.getElementById('inject-frame').src='https://ghsappv5.netlify.com/calendar.html';">
+                <input id="nav-btn4" type="radio" name="bottom-nav">
+                <label for="nav-btn4"><img src="icons/Calendar.svg"></label>
+            </div>
+            <div class="bottom-nav-button"
+                onclick="target();document.getElementById('inject-frame').src='https://workforcedevelopment.netlify.com';">
+                <input id="nav-btn5" type="radio" name="bottom-nav">
+                <label for="nav-btn5"><img src="Assets/work-dev.svg"></label>
+            </div>
+        </div>
+    </div>
+    <script>
+        function target() {
+            document.getElementById("frame").style.display = "block";
+        }
+
+        function view() {
+            document.getElementById("frame").style.display = "none";
+        }
+    </script>
+
+    <script>
+        function story() {
+            document.getElementById("story-close").style.display = "block";
+        }
+
+        function close() {
+            document.getElementById("story-close").style.display = "none";
+        }
+    </script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script src="/jquery.firstVisitPopup.min.js"></script>
+<script>
+    $(function () {
+        $('#my-welcome-message').firstVisitPopup({
+            cookieName : 'homepage',
+            showAgainSelector: '#show-message'
+        });
+    });
+</script>
+</body>
+
+</html>

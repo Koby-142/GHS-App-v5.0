@@ -323,3 +323,6 @@ details[open] summary::-webkit-details-marker {
 .menu-viewer > #breakfast:target {display: block;}
 
 #breakfast > img {width: 100%;;}
+
+
+.notification  {background-color: ;margin: auto; width: 93%;border-radius: 5px;border: solid 1px lightgray;}

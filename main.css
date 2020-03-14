@@ -217,7 +217,7 @@ label>img:active {}
 
 .new-container > details {margin-bottom: -45px;}
 
-details > summary:focus {outline: none;}
+.menu-details > summary:focus {outline: none;}
 
 .new-container {margin: auto;width: 94%;margin-top: 12px;}
 
@@ -227,7 +227,7 @@ details > summary:focus {outline: none;}
 
 summary{list-style-type: none;}
 
-details:focus {outline: none;}
+.menu-details:focus {outline: none;}
 
 .new-view > div {}
 
@@ -235,9 +235,9 @@ details:focus {outline: none;}
 
 .new-view > div > h3 {white-space: pre-wrap;margin-bottom: -5px;font-size: 15px;font-weight: 500;margin-top: 14px;}
 
-details > summary {list-style-type: none;}
+.menu-details > summary {list-style-type: none;}
 
-details summary::-webkit-details-marker {
+.menu-details summary::-webkit-details-marker {
   background: url(/Assets/open.svg) ;
   background-size: contain;
   background-repeat: no-repeat;;
@@ -248,7 +248,7 @@ details summary::-webkit-details-marker {
   margin-top: 5px;
   margin-right: 15px;
 }
-details[open] summary::-webkit-details-marker {
+.menu-details[open] summary::-webkit-details-marker {
   background: url(/Assets/close.svg) ;background-size: cover;
   color: transparent;
   width: 64px;
@@ -350,7 +350,7 @@ details[open] summary::-webkit-details-marker {
 
 .menu-popup {position: fixed; top: 0px; width: 100%; height: 100vh; background-color: rgba(0, 0, 0, 0.555); left: 0px;z-index: 500;;}
 
-.menu-sub {position: fixed; bottom: 0px;;width: 100%;;background-color: white;padding-top: 20px;padding-bottom: 20px;}
+.menu-sub {position: fixed; top: 0px;;width: 100%;;background-color: white;padding-top: 20px;padding-bottom: 20px;height:100vh;}
 
 .menu-margin {margin: auto; width: 90%;overflow: scroll;}
 

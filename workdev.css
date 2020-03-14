@@ -258,7 +258,7 @@ ul.dropdown-content.select-dropdown li span {
 .form-btn-container {
     margin: auto;
     width: 125px;
-    ;
+    margin-bottom: 150px
     ;
 }
 
@@ -312,7 +312,7 @@ input.focus[type=checkbox] {
     margin: auto;
     width: 94%;
 
-    ;
+    ;margin-bottom: 0px;
 }
 
 .log-form-container>form {

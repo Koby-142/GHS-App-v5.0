@@ -206,7 +206,7 @@
 
 
     <div class="new-container vivify fadeIn delay-400" style="display: Block;">
-        <details open>
+        <details open class="menu-details">
             <summary>  
                 <div class="new-view" style="margin-top: 0px;">  
                     <div >
@@ -412,13 +412,14 @@ function imageOpen(){
     <a href="#" class="pop-close"><button class="waves-effect"></button></a>
 <div class="menu-sub vivify fadeInBottom duration-200">
 <div class="menu-margin">
-<div class="profile-text-container">
-<h2 id="menuindi">Profile Set-up</h2>
+<div class="profile-text-container" style="margin-left: 0px;margin-bottom: 10px;">
+    <h3>Welcome Back</h3>
+<h2 id="menuindi">Create Account</h2>
 <p>
- Fill out important info once and log your hours quicker.
+ We've made some changes to help customize your experience.
      </p>
 </div>
-<form action="index.html" onsubmit="localStorage.setItem('setup', 'complete');localStorage.setItem('index', 'remove');">
+<form style="margin-top: 40px;" action="index.html" onsubmit="localStorage.setItem('setup', 'complete');localStorage.setItem('index', 'remove');">
 <div class="input-field">
 <input oninput="var nameItem = document.getElementById('name').value;localStorage.setItem('name', nameItem);" name="entry.856417767" id="name" type="text" class="validate" required autofocus>
 <label for="name">First & Last Name</label>
@@ -427,8 +428,8 @@ function imageOpen(){
 <div id="icons"><div class="progress">
 <div class="indeterminate"></div>
 </div></div>
-<div class="input-field col s12">
-<select id="business" onchange="var businessItem = document.getElementById('business').value;localStorage.setItem('business', businessItem);" class="browser-default" name="entry.1840486379" required>
+<div style="display: none;" class="input-field col s12">
+<select id="business" onchange="var businessItem = document.getElementById('business').value;localStorage.setItem('business', businessItem);" class="browser-default" name="entry.1840486379">
  <option value="" disabled selected>Select A Business</option>
  <option value="Harrison County Development Commission">Harrison County Development Commission
  </option>
@@ -460,6 +461,8 @@ function imageOpen(){
 <input autofocus oninput="var numberItem = document.getElementById('ac-number').value;localStorage.setItem('number', numberItem); " id="ac-number" type="number" class="validate" required>
 <label for="ac-number">Lunch Number</label>
 </div>
+
+
 <div class="btn-exc">
 <div class="form-btn-container "><button type="submit" class="btn blue darken-4"
  style="background-color: #012395 !important;"><i class="material-icons left">lock</i>Submit</button>

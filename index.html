@@ -344,6 +344,69 @@ function imageOpen(){
         });
     });
 </script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<div id="menu-pop" class="menu-popup" >
+    <a href="#" class="pop-close"><button class="waves-effect"></button></a>
+<div class="menu-sub vivify fadeInBottom duration-200">
+<div class="menu-margin">
+<div class="profile-text-container">
+<h2 id="menuindi">Profile Set-up</h2>
+<p>
+ Fill out important info once and log your hours quicker.
+     </p>
+</div>
+<form action="index.html" onsubmit="localStorage.setItem('setup', 'complete');localStorage.setItem('index', 'remove');">
+<div class="input-field">
+<input oninput="var nameItem = document.getElementById('name').value;localStorage.setItem('name', nameItem);" name="entry.856417767" id="name" type="text" class="validate" required autofocus>
+<label for="name">First & Last Name</label>
+</div>
+<h3 style="font-size: 12px;color:#9e9e9e;margin-bottom: 10px;margin-top: -5px;">Avatar</h3>
+<div id="icons"><div class="progress">
+<div class="indeterminate"></div>
+</div></div>
+<div class="input-field col s12">
+<select id="business" onchange="var businessItem = document.getElementById('business').value;localStorage.setItem('business', businessItem);" class="browser-default" name="entry.1840486379" required>
+ <option value="" disabled selected>Select A Business</option>
+ <option value="Harrison County Development Commission">Harrison County Development Commission
+ </option>
+ <option value="Port Of Gulfport">Port Of Gulfport</option>
+ <option value="DECA">DECA</option>
+ <option value="Gulfport School District Technology">Gulfport School District Technology</option>
+ <option value="Ingalls Ship Building">Ingalls Ship Building</option>
+ <option value="Federal Programs">Federal Programs</option>
+ <option value="Public Relations">Public Relations</option>
+ <option value="Team Fusion (Robotics)">Team Fusion (Robotics)</option>
+ <option value="Med Tech">Med Tech</option>
+ <option value="Teacher Academy">Teacher Academy</option>
+ <option value="Law & Public Safety">Law & Public Safety</option>
+ <option value="Digital Media">Digital Media</option>
+ <option value="WGTV Broadcasting">WGTV Broadcasting</option>
+ <option value="Student Ambassador">Student Ambassador</option>
+ <option value="Culinary">Culinary</option>
+ <option value="Student Worker">Student Worker</option>
+ <option value="Community Service">Community Service</option>
+ <option onclick="other()" value="(Other) |">Other</option>
+</select>
+</div>
+
+<div class="input-field" style="display: none;">
+<input oninput="var otherItem = document.getElementById('other').value;localStorage.setItem('other', otherItem);" id="other" type="text" class="validate" autofocus>
+<label for="other" >Other Place Of Work (If Not Listed Above)</label>
+</div>
+<div id="lunch-number" class="input-field" style="margin-top: 25px;">
+<input autofocus oninput="var numberItem = document.getElementById('ac-number').value;localStorage.setItem('number', numberItem); " id="ac-number" type="number" class="validate" required>
+<label for="ac-number">Lunch Number</label>
+</div>
+<div class="btn-exc">
+<div class="form-btn-container "><button type="submit" class="btn blue darken-4"
+ style="background-color: #012395 !important;"><i class="material-icons left">lock</i>Submit</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
 </body>
 
 </html>

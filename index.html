@@ -6,6 +6,7 @@
 <!DOCTYPE html>
 
 <head>
+    <script>document.getElementById('namepara').innerHTML = localStorage.getItem('name');document.getElementById('profileCreate').classList.add(localStorage.getItem('index'));document.getElementById('profileWrap').classList.add(localStorage.getItem('setup'));document.getElementById('menu-pop').classList.add(localStorage.getItem('index'));</script>
     <title>GHS App | v5.0</title>
     <!-----------------CSS------------------->
     <link rel="stylesheet" href="main.css">
@@ -146,7 +147,7 @@
     
 </head>
 
-<body class="vivify fadeIn delay-200">
+<body class="vivify fadeIn delay-200" >
 
     <!------------------Top-Navigation-------------->
     <div class="navigation-cover">
@@ -155,8 +156,8 @@
     <a href="index.html">
     <div class="top-navigation" id="nav-scroll">
 
-        <div class="logo-container">
-            <img onload="document.getElementById('namepara').innerHTML = localStorage.getItem('name');document.getElementById('profileCreate').classList.add(localStorage.getItem('index'));document.getElementById('profileWrap').classList.add(localStorage.getItem('setup'));document.getElementById('menu-pop').classList.add(localStorage.getItem('index'));" src="branding/New GSD Logo Micro 512px.svg">
+        <div class="logo-container" onload="">
+            <img  src="branding/New GSD Logo Micro 512px.svg">
         </div>
 
     </div>
@@ -189,7 +190,7 @@
 </div>
 <div onload="" id="profileWrap" class="jn">
 <div  id="profileIndicator" class="profile-indicator">
-    <img id="imgIcon" class="profile-icon" src="Icons/561411.png" onload="document.getElementById('imgIcon').src = localStorage.getItem('seticon')">
+    <img  id="imgIcon" class="profile-icon" src="Icons/561411.png" onload="document.getElementById('imgIcon').src = localStorage.getItem('seticon')">
     <div class="indicator-text">
         <h3>Welcome Back</h3>
         <p  id="namepara">null</p>

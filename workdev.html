@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="robots" content="noindex" />
+    <title>GHS Workforce Development</title>
+    <link rel="stylesheet" href="workdev.css">
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="manifest" href="manifest.json">
+    <meta name="description" content="------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="vivify.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js">
+    </script>
+    
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-145321577-2');
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/workforceDevelopment/data', function (data) {
+                var template = Handlebars.compile($('#item-template').html())
+                $('#items').html(template(data.data))
+            })
+        })
+    </script>
+    <script id="item-template" type="text/x-handlebars-template">
+        <style>
+    .waves-effect {border-radius: 5px !important;}
+    </style>
+        {{#each this}}
+    <li>
+        <a href="#view-hours" >
+            <div class="name-view vivify fadeOut delay-1750 duration-100"><h5 class="vivify fadeOut delay-1000 ">Welcome Back, {{name}}</h5> </div>
+<div class="data-items vivify fadeIn delay-2000">
+    <span style="display:none">{{lunchNumber}}</span>
+    <details style="border-radius: 5px;">
+        <summary style="width: 100%;border-radius: 5px;" class="waves-effect" >
+      
+           {{productivity}}
+                <span style="font-size: 15px;font-weight: bold;">{{hoursWorked}} Hours</span>
+           <br> 
+           <span>{{date}} </span>
+           <br>
+            <span>${{paid}}</span>
+                <br>
+                <h6 style="font-size: 12px;text-align: right;margin-top: -10px;">{{placeOfWork}} {{other}}</h6>
+                <p class="workid">Log ID:{{id}}</p>
+              
+        </summary>
+    
+       
+    </details>
+</div>
+    </a>
+</li>
+            {{/each}}
+        
+        </script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/workforceDevelopment/icons', function (data) {
+                    var template = Handlebars.compile($('#item-template2').html())
+                    $('#icons').html(template(data.icons))
+                })
+            })
+        </script>
+        <script id="item-template2" type="text/x-handlebars-template">
+         <div class="icon-container">
+            {{#each this}}
+
+            <a class="icons" onclick="localStorage.setItem('seticon', 'Icons/' + '{{icon}}' + '.png');">
+   <img loading ="lazy" src="Icons/{{icon}}.png">
+</a>
+
+                {{/each}}
+            </div>
+            </script>
+</head>
+
+<body onload="loaded()" >
+ 
+<div class="offline" style="display:none">
+    <div class="offline-text-container">
+     <h5 style="font-weight: 500;">Under Maintenance</h5>
+     <p>We are so sorry for the inconvenience workforce development will be under maintenance until 9:45am today.</p>
+    </div>
+</div>
+   
+
+    <script>
+        function load() {
+            document.getElementsByClassName("work")[0].style.display = "block";
+        }
+    </script>
+    <div class="home" id="home">
+        <div class="home-navigation">
+            <div class="logo-position">
+                <div class="home-logo-container">
+                    <img onload="document.getElementById('namepara').innerHTML = localStorage.getItem('name');document.getElementById('profileCreate').classList.add(localStorage.getItem('index'));document.getElementById('profileWrap').classList.add(localStorage.getItem('setup'));" src="Branding/Logo.svg">
+                </div>
+            </div>
+
+         
+
+            <div id="navigation" class="navigation">
+
+                <div id="profileCreate" class="create-profile vivify fadeIn duration-500">
+                    <div class="profile-text-container">
+                        <h3>Set Up</h3>
+                        <h2>A Profile</h2>
+                        <p>
+                            Fill out important info once and log your hours quicker.
+                                </p>
+                    </div>
+     <a href="#menu-pop"><button class="waves-effect" style="margin-top: -60px;">Get Started</button></a>
+             
+                </div>
+                <div onload="" id="profileWrap" class="jn">
+                <div  id="profileIndicator" class="profile-indicator">
+                    <img id="imgIcon" class="profile-icon" src="Icons/561411.png" onload="document.getElementById('imgIcon').src = localStorage.getItem('seticon')">
+                    <div class="indicator-text">
+                        <h3>Welcome Back</h3>
+                        <p  id="namepara">null</p>
+                    </div>
+             <div class="create-profile">
+                <a href="#menu-pop" onclick="document.getElementById('name').value = localStorage.getItem('name');document.getElementById('ac-number').value = localStorage.getItem('number');document.getElementById('business').value = localStorage.getItem('business');document.getElementById('other').value = localStorage.getItem('other');document.getElementById('menuindi').innerHTML = 'Edit Profile';"><button class="waves-effect">Edit Profile</button></a>
+             </div>
+                </div>
+            </div>
+                <a href="#log-hours"> <button class="waves-effect waves-dark white"><img
+                            src="assets/assignment_returned-24px.svg">Log Todays
+                        Hours</button></a>
+                <a href="#view-hours">
+                    <button  class="waves-effect waves-dark white"><img src="assets/assessment-24px.svg">View My
+                        Hours</button></a>
+                <a href="#feedback">
+                    <button class="waves-effect waves-dark white"><img src="assets/contact_support-24px (1).svg">Give
+                        Feedback</button></a>
+                        <style>
+                          .waves-effect.waves-teal .waves-ripple {
+   /* The alpha value allows the text and background color
+   of the button to still show through. */
+    background-color: rgba(50, 42, 161, 0.65);
+  }
+          
+                        </style>
+                        <a href="#popup"><button style="border: none;padding: 0px;margin-top: 0px;" onclick="document.getElementById('open-frame').src ='https://m.mscoastaljobs.com/internships'"><div style="display:none"  class="new waves-effect"><img src="assets/partnership.svg"></div></button></a> 
+            </div>
+          <div class="iframe-open" id="popup"><a href="#"><i class="material-icons close-btn">close</i></a><iframe class="open-frame" id="open-frame" src=""></iframe></div>
+            <section class="log-hours" id="log-hours">
+                <a href="https://workforcedevelopment.netlify.com/" class="waves-effect"><i class="material-icons back-btn">arrow_back</i></a>
+
+                <h6 class="section-header">Log Todays Hours</h6>
+                <iframe class="vivify fadeIn duration-500" src="formlog.html"></iframe>
+            </section>
+
+            <div id="view-hours" class="view-hours">
+<div class="view-container" id="up">  <a href="#" class="waves-effect"><i class="material-icons back-btn">arrow_back</i></a>
+    <a href="https://workforcedevelopment.netlify.com" class="waves-effect"><i class="material-icons refresh-btn"
+           >refresh</i></a>
+    <h6 class="section-header">View Hours</h6></div>
+              
+                <script>
+                    $(window).scroll(function () {
+                        var scroll = $(window).scrollTop();
+                        if (scroll > 0) {
+                            $("#up").addClass("scrolled");
+                        } else {
+                            $("#up").removeClass("scrolled");
+                        }
+                    });
+                </script>
+
+                <div class="search-wrapper vivify fadeIn duration-500">
+                    <div class="search-input-container" > <input style="padding-left: 10px;;"
+                            autofocus class="search-input" type="number" id="mySearch" onkeydown="myFunction()"
+                            placeholder="&emsp; Enter Lunch Number" title="Click To Search For Jobs" minlength="5"
+                            required><button onclick="search()"
+                            class="btn-flat waves-effect confirm-button right vivify fadeInRight delay-1250"
+                            type="submit">Verify</button>
+                    </div>
+
+                </div>
+
+                <ul id="myMenu" class="result-list vivify fadeIn " style="list-style-type: none;text-decoration: none;">
+
+                    <div style="margin: auto;;" class="vivify fadeIn">
+                      <a href="#popup">
+                        <div class="report">
+                            <button onclick="document.getElementById('open-frame').src ='https://docs.google.com/forms/d/e/1FAIpQLSeM6aM8Bnd6g1ZbzpAoEOEwQX3muLbiJTo2HuNgMnqVcAZdjQ/viewform'" class="btn-flat waves-effect">Report An Error With Your Hours</button>
+                        </div>
+
+                    </a>
+                        <div  style="padding-top: 80px;" id="items"></div>
+                       
+                        <div class="report-sect vivify fadeIn" style="display: none;" id="report">
+                            <form>
+                              
+            <div id="lunch-number" class="input-field">
+                <input name="entry.1866640669" id="number" type="number" class="validate" required>
+                <label for="number">Lunch Number</label>
+            </div>
+
+            <div id="lunch-number" class="input-field">
+                <input name="entry.1866640669" id="email" type="email" class="validate" required>
+                <label for="email">School E-Mail</label>
+            </div>
+
+            <div id="lunch-number" class="input-field">
+                <input name="entry.1866640669" id="fix" type="text" class="validate" required>
+                <label for="fix">Enter Your Issue</label>
+            </div>
+
+                                <div class="form-btn-container"><button type="submit" class="btn blue darken-4"
+                                        style="background-color: #012395 !important;"><i
+                                            class="material-icons left">lock</i>Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                </ul>
+
+            
+                <script>
+                    function reportissue() {
+                        document.getElementsByClassName("report-sect").style.display = "block"
+                    }
+                </script>
+                <script>
+                    function myFunction() {
+                        var e, s, t;
+                        for (e = document.getElementById("mySearch").value.toUpperCase(), s = document.getElementById(
+                                "items").getElementsByTagName("li"), t = 0; t < s.length; t++) - 1 < s[t]
+                            .getElementsByTagName("a")[0].innerHTML.toUpperCase().indexOf(e) ? s[t].style.display =
+                            "block" : s[t].style.display = "none"
+                    }
+                </script>
+
+                <script>
+                    function search() {
+                        document.getElementsByClassName("result-list")[0].style.display = "block";
+                        document.getElementsByClassName("search-wrapper")[0].style.display = "none";
+                    }
+                </script>
+
+            </div>
+
+           <div id="menu-pop" class="menu-popup" >
+               <a href="#" class="pop-close"><button class="waves-effect"></button></a>
+<div class="menu-sub vivify fadeInBottom duration-200">
+    <div class="menu-margin">
+    <div class="profile-text-container">
+        <h2 id="menuindi">Profile Set-up</h2>
+        <p>
+            Fill out important info once and log your hours quicker.
+                </p>
+    </div>
+    <form action="index.html" onsubmit="localStorage.setItem('setup', 'complete');localStorage.setItem('index', 'remove');">
+    <div class="input-field">
+        <input oninput="var nameItem = document.getElementById('name').value;localStorage.setItem('name', nameItem);" name="entry.856417767" id="name" type="text" class="validate" required autofocus>
+        <label for="name">First & Last Name</label>
+    </div>
+    <h3 style="font-size: 12px;color:#9e9e9e;margin-bottom: 10px;margin-top: -5px;">Avatar</h3>
+    <div id="icons"><div class="progress">
+        <div class="indeterminate"></div>
+    </div></div>
+    <div class="input-field col s12">
+        <select id="business" onchange="var businessItem = document.getElementById('business').value;localStorage.setItem('business', businessItem);" class="browser-default" name="entry.1840486379" required>
+            <option value="" disabled selected>Select A Business</option>
+            <option value="Harrison County Development Commission">Harrison County Development Commission
+            </option>
+            <option value="Port Of Gulfport">Port Of Gulfport</option>
+            <option value="DECA">DECA</option>
+            <option value="Gulfport School District Technology">Gulfport School District Technology</option>
+            <option value="Ingalls Ship Building">Ingalls Ship Building</option>
+            <option value="Federal Programs">Federal Programs</option>
+            <option value="Public Relations">Public Relations</option>
+            <option value="Team Fusion (Robotics)">Team Fusion (Robotics)</option>
+            <option value="Med Tech">Med Tech</option>
+            <option value="Teacher Academy">Teacher Academy</option>
+            <option value="Law & Public Safety">Law & Public Safety</option>
+            <option value="Digital Media">Digital Media</option>
+            <option value="WGTV Broadcasting">WGTV Broadcasting</option>
+            <option value="Student Ambassador">Student Ambassador</option>
+            <option value="Culinary">Culinary</option>
+            <option value="Student Worker">Student Worker</option>
+            <option value="Community Service">Community Service</option>
+            <option onclick="other()" value="(Other) |">Other</option>
+        </select>
+    </div>
+
+    <div class="input-field" style="display: none;">
+        <input oninput="var otherItem = document.getElementById('other').value;localStorage.setItem('other', otherItem);" id="other" type="text" class="validate" autofocus>
+        <label for="other" >Other Place Of Work (If Not Listed Above)</label>
+    </div>
+    <div id="lunch-number" class="input-field" style="margin-top: 25px;">
+        <input autofocus oninput="var numberItem = document.getElementById('ac-number').value;localStorage.setItem('number', numberItem); " id="ac-number" type="number" class="validate" required>
+        <label for="ac-number">Lunch Number</label>
+    </div>
+<div class="btn-exc">
+    <div class="form-btn-container "><button type="submit" class="btn blue darken-4"
+            style="background-color: #012395 !important;"><i class="material-icons left">lock</i>Submit</button>
+    </div>
+</div>
+</form>
+</div>
+</div>
+           </div>
+
+            <section id="feedback">
+                <a href="#" class="waves-effect"><i class="material-icons back-btn">arrow_back</i></a>
+
+                <h6 class="section-header">Give Feedback</h6>
+                <iframe class="vivify fadeIn duration-500"
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSeYVbPzkkoduUZBEQD6smSUFPE2aa2_aANZCrIHgCfRuTEFsA/viewform?embedded=true"
+                    width="100%" height="95%" frameborder="0">Loading…</iframe>
+            </section>
+        </div>
+       
+
+</body>
+
+
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GHS Workforce Development</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="manifest" href="manifest.json">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="vivify.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+
+
+    <style>
+        /* label focus color */
+        .input-field input[type=text]:focus+label {
+            color: #012395 !important;
+        }
+
+
+
+        /* label underline focus color */
+        .input-field input[type=text]:focus {
+            border-bottom: 1px solid #012395 !important;
+            box-shadow: 0 1px 0 0 !important;
+        }
+
+        .input-field input[type=number]:focus+label {
+            color: #012395 !important;
+        }
+ 
+
+
+        /* label underline focus color */
+        .input-field input[type=number]:focus {
+            border-bottom: 1px solid #012395 !important;
+            box-shadow: 0 1px 0 0 !important;
+        }
+    </style>
+    <div class="log-form-container">
+<img src="/Branding/Logo.svg" style="display: none;" onload="document.getElementById('name').value = localStorage.getItem('name');document.getElementById('number').value = localStorage.getItem('number');document.getElementById('number').value = localStorage.getItem('number');document.getElementById('business').value = localStorage.getItem('business');document.getElementById('other').value = localStorage.getItem('other');">
+<img src="/GHS-Workforce-Devlopment/Branding/Logo.png" style="display: none;" onload="document.getElementById('name').value = localStorage.getItem('name');document.getElementById('number').value = localStorage.getItem('number');document.getElementById('business').value = localStorage.getItem('business');document.getElementById('other').value = localStorage.getItem('other');">
+        <form
+            action="https://docs.google.com/forms/u/1/d/e/1FAIpQLScs4RgNH1a2U4oEOuOjpiI-5SxIj7SXujKg_8ybpMVd0xKGxQ/formResponse">
+            <div class="input-field">
+                <input autofocus name="entry.856417767" id="name" type="text" class="validate" required>
+                <label for="name">First & Last Name</label>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var elems = document.querySelectorAll('select');
+                    var instances = M.FormSelect.init(elems, options);
+                });
+            </script>
+             <div id="lunch-number" class="input-field">
+                <input name="entry.1866640669" id="number" type="number" class="validate" required>
+                <label for="number">Lunch Number</label>
+            </div>
+            <div class="input-field col s12">
+                <select id="business" onchange="other()" class="browser-default" name="entry.1840486379" required>
+                    <option value="" disabled selected>Select A Business</option>
+                    <option value="Harrison County Development Commission">Harrison County Development Commission
+                    </option>
+                    <option value="Port Of Gulfport">Port Of Gulfport</option>
+                    <option value="DECA">DECA</option>
+                    <option value="Gulfport School District Technology">Gulfport School District Technology</option>
+                    <option value="Ingalls Ship Building">Ingalls Ship Building</option>
+                    <option value="Federal Programs">Federal Programs</option>
+                    <option value="Public Relations">Public Relations</option>
+                    <option value="Team Fusion (Robotics)">Team Fusion (Robotics)</option>
+                    <option value="Med Tech">Med Tech</option>
+                    <option value="Teacher Academy">Teacher Academy</option>
+                    <option value="Law & Public Safety">Law & Public Safety</option>
+                    <option value="Digital Media">Digital Media</option>
+                    <option value="WGTV Broadcasting">WGTV Broadcasting</option>
+                    <option value="Student Ambassador">Student Ambassador</option>
+                    <option value="Culinary">Culinary</option>
+                    <option value="Student Worker">Student Worker</option>
+                    <option value="Community Service">Community Service</option>
+                    <option onclick="other()" value="(Other) |">Other</option>
+                </select>
+            </div>
+
+
+            <div class="input-field" >
+                <input name="entry.1830015961" id="other" type="text" class="validate">
+                <label for="other" >Other Place Of Work (If Not Listed Above)</label>
+            </div>
+            <script>
+                function other() {
+                    document.getElementsByClassName("other")[0].style.display = "block";
+                    console.log("Other Input Loaded")
+                }
+            </script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var elems = document.querySelectorAll('select');
+                    var instances = M.FormSelect.init(elems);
+                });
+            </script>
+
+<script>function randNumber(len, an){
+    an = an&&an.toLowerCase();
+    var str="", i=0, min=an=="a"?10:0, max=an=="n"?10:62;
+    for(;i++<len;){
+      var r = Math.random()*(max-min)+min <<0;
+      str += String.fromCharCode(r+=r>9?r<36?55:61:48);
+    }
+    return str;
+  }
+  document.getElementById("foo").value = randNumber(10,'A');</script>
+  <script>function randNumber(len, an){
+    an = an&&an.toLowerCase();
+    var str="", i=0, min=an=="a"?10:0, max=an=="n"?10:62;
+    for(;i++<len;){
+      var r = Math.random()*(max-min)+min <<0;
+      str += String.fromCharCode(r+=r>9?r<36?55:61:48);
+    }
+    return str;
+  }
+  document.getElementById("foo2").value = randNumber(10,'A');
+  document.getElementById("foo3").value = randNumber(10,'A');</script>
+    </body>
+
+
+            <div id="hours-worked" class="input-field">
+                <input pattern="^\d+(?:\.\d{1,2})?$" name="entry.2110425346" id="hours" type="number" min="0"
+                    step="0.01" class="validate" required>
+                <label for="hours">Hours Worked</label>
+            </div>
+
+            <p>
+                <label onclick="show()">
+                    <input name="group3" class="with-gap" type="radio" />
+                    <span>Paid Hours</span>
+                </label>
+            </p>
+            <p>
+                <label onclick="none()">
+                    <input name="group3" class="with-gap" type="radio" />
+                    <span>Unpaid Hours</span>
+                </label>
+            </p>
+
+            <div id="paid-content" class="paid-content">
+                <div id="your-rate" class="input-field">
+                    <input name="entry.518165668" min="0" step="0.01" id="rate" type="number" class="validate">
+                    <label for="rate">Rate $/Hour</label>
+                </div>
+
+                <div id="results" class="input-field">
+                    <input name="entry.270501526" placeholder="$" id="pay" type="number" readonly>
+                    <label for="pay">Your Pay (No Tax)</label>
+                </div>
+            </div>
+            <div class="unpaid-content vivify fadeInLeft duration-200" id="unpaid-content">
+                <div class="card-panel teal" style="background-color: #012395 !important;">
+                    <span class="white-text">Your hours today could be used as community service hours.
+                        Contact Dr.Thomas Wallace at thomas.wallace@gulfportschools.org for more
+                        information.
+                    </span>
+
+                </div>
+            </div>
+            <div class="input-field">
+                <textarea name="entry.2061928731" id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Daily Productivity (Optional)</label>
+            </div>
+            <div class="input-field">
+                <input placeholder="Choose A Date" name="entry.1648798472" type="date" id="date1" class="datepicker"
+                    required>
+                <label for="number">Choose A Date Below</label>
+            </div>
+
+            <div class="form-btn-container"><button type="submit" class="btn blue darken-4"
+                    style="background-color: #012395 !important;"><i class="material-icons left">lock</i>Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function none() {
+            document.getElementById("paid-content").style.display = "none";
+            document.getElementById("unpaid-content").style.display = "block";
+        }
+
+        function show() {
+            document.getElementById("paid-content").style.display = "block";
+            document.getElementById("unpaid-content").style.display = "none";
+        }
+    </script>
+    <script>
+        function calcSalary() {
+            var wage = parseFloat(document.getElementById('rate').value);
+            var hours = parseFloat(document.getElementById('hours').value);
+            var calculate = wage * hours;
+
+            document.getElementById('pay').value = calculate;
+        }
+
+        function foo() {
+            calcSalary()
+            setTimeout(foo, 100);
+        }
+        foo();
+    </script>
+    </section>
+
+    </div>
+
+
+
+</body>
+
+</html>

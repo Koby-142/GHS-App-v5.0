@@ -48,6 +48,8 @@
         })
     </script>
 
+
+
     <!------------------Story Template------------------------>
 
     <script id="item-template" type="text/x-handlebars-template">
@@ -104,6 +106,28 @@
     </div>
 </script>
 
+<!----------------------------Icon Engine--------------------------------->
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/workforceDevelopment/icons', function (data) {
+            var template = Handlebars.compile($('#item-templateg').html())
+            $('#icons').html(template(data.icons))
+        })
+    })
+</script>
+<script id="item-templateg" type="text/x-handlebars-template">
+ <div class="icon-container">
+    {{#each this}}
+
+    <a class="icons" onclick="localStorage.setItem('seticon', 'Icons/' + '{{icon}}' + '.png');">
+<img loading ="lazy" src="Icons/{{icon}}.png">
+</a>
+
+        {{/each}}
+    </div>
+    </script>
+
     <!-------------------Navigation API Endpoint--------------->
 
 
@@ -132,7 +156,7 @@
     <div class="top-navigation" id="nav-scroll">
 
         <div class="logo-container">
-            <img src="branding/New GSD Logo Micro 512px.svg">
+            <img onload="document.getElementById('namepara').innerHTML = localStorage.getItem('name');document.getElementById('profileCreate').classList.add(localStorage.getItem('index'));document.getElementById('profileWrap').classList.add(localStorage.getItem('setup'));" src="branding/New GSD Logo Micro 512px.svg">
         </div>
 
     </div>
@@ -148,6 +172,39 @@
     });
   </script>
 <div class="home-overflow">
+
+
+<!-----------------------------------Profile Create----------------------------->
+
+<div id="profileCreate" class="create-profile vivify fadeIn duration-500">
+    <div class="profile-text-container">
+        <h3>Set Up</h3>
+        <h2>A Profile</h2>
+        <p>
+            Fill out important info once and log your hours quicker.
+                </p>
+    </div>
+<a href="#menu-pop"><button class="waves-effect" style="margin-top: -60px;">Get Started</button></a>
+
+</div>
+<div onload="" id="profileWrap" class="jn">
+<div  id="profileIndicator" class="profile-indicator">
+    <img id="imgIcon" class="profile-icon" src="Icons/561411.png" onload="document.getElementById('imgIcon').src = localStorage.getItem('seticon')">
+    <div class="indicator-text">
+        <h3>Welcome Back</h3>
+        <p  id="namepara">null</p>
+    </div>
+<div class="create-profile">
+<a href="#menu-pop" onclick="document.getElementById('name').value = localStorage.getItem('name');document.getElementById('ac-number').value = localStorage.getItem('number');document.getElementById('business').value = localStorage.getItem('business');document.getElementById('other').value = localStorage.getItem('other');document.getElementById('menuindi').innerHTML = 'Edit Profile';"><button class="waves-effect">Edit Profile</button></a>
+</div>
+</div>
+</div>
+
+
+
+
+
+
     <div class="new-container vivify fadeIn delay-400" style="display: Block;">
         <details open>
             <summary>  
@@ -159,6 +216,8 @@
                 
                 </div>
             </summary>
+
+            
             <div class="new-view">
                 <div style="border-top: solid 1px lightgray;" class="vivify fadeIn ">
                     <h3>Friday</h3>
@@ -179,6 +238,9 @@
             </div>
         </details>
     </div>
+
+
+
     <!---------------------Stories------------------------>
 
     <div id="items">
@@ -308,7 +370,7 @@ function imageOpen(){
                 <label for="nav-btn4"><img src="icons/Calendar.svg"></label>
             </div>
             <div class="bottom-nav-button"
-                onclick="target();document.getElementById('inject-frame').src='https://workforcedevelopment.netlify.com';">
+                onclick="target();document.getElementById('inject-frame').src='workdev.html'">
                 <input id="nav-btn5" type="radio" name="bottom-nav">
                 <label for="nav-btn5"><img src="Assets/work-dev.svg"></label>
             </div>

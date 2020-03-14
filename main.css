@@ -342,19 +342,23 @@ details[open] summary::-webkit-details-marker {
 
 .profile-text-container > h2 {font-size: 25px;font-weight: 500;padding-top: 0px;margin-top: 0px;margin-bottom: 0px;}
 
-.profile-text-container >p {margin-top: 0px;font-size: 13.5px;margin-bottom: 0px;}
+.profile-text-container >p {margin-top: 0px;font-size: 13.5px;margin-bottom: 0px;width: 100%;}
 
-.create-profile > a > button {position: absolute; right: 10px;margin-top: 15px;width: 110px;height: 35px;border-radius: 7px;border-radius: 5px;border: solid 1px lightgray;background-color: rgb(255, 255, 255);}
+.profile-text-container {margin-left: 12px;}
+
+.create-profile > a > button { right: 10px;margin-top: 15px;width: 110px;height: 35px;border-radius: 7px;border-radius: 5px;border: solid 1px lightgray;background-color: rgb(255, 255, 255);float: right;}
 
 .menu-popup {position: fixed; top: 0px; width: 100%; height: 100vh; background-color: rgba(0, 0, 0, 0.555); left: 0px;z-index: 500;;}
 
-.menu-sub {position: fixed; bottom: 75px;;width: 100%;;background-color: white;padding-top: 20px;padding-bottom: 20px;}
+.menu-sub {position: fixed; bottom: 0px;;width: 100%;;background-color: white;padding-top: 20px;padding-bottom: 20px;}
 
 .menu-margin {margin: auto; width: 90%;overflow: scroll;}
 
 .pop-close> button {position: fixed; width: 100%;height: 50vh;border: none;background-color: transparent;background-color: transparent;z-index: -1;}
 
 #menu-pop {display: none;}
+
+.create-profile {margin-top: 60px;}
 
 #menu-pop:target {display: block;}
 
@@ -366,7 +370,7 @@ details[open] summary::-webkit-details-marker {
 
 .jn {display: none;}
 
-.complete {display: block;}
+.complete {display: block;margin: auto;width: 95%;height: 20px;}
 
 .remove {display: none;}
 
@@ -376,7 +380,7 @@ details[open] summary::-webkit-details-marker {
 
 .icon-container {overflow: scroll; height:50px;white-space: nowrap;padding-bottom: 10px;}
 
-.profile-icon {float: left;width:50px;height:50px; border-radius: 50px;border:solid 1px lightgray;margin-top: 4px;;}
+.profile-icon {float: left;width:50px;height:50px; border-radius: 50px;border:solid 1px lightgray;margin-top: 4px;;margin-left: 2px;}
 
 .icons > img:hover {border-color:black;background-color: #012395;border: none;}
 

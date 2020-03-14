@@ -328,3 +328,7 @@ details[open] summary::-webkit-details-marker {
 
 
 .notification  {background-color: ;margin: auto; width: 93%;border-radius: 5px;border: solid 1px lightgray;}
+
+@media (orientation: landscape) {
+.bottom-navigation {display: none;}
+}

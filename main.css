@@ -159,7 +159,7 @@ label>img:active {}
 
 .right-content > p {margin: 0px;margin-top: 5px;font-size: 14px;white-space: pre-wrap;}
 
-.right-content > h3 {margin: 0px;font-size: 15px;}
+.right-content > h3 {margin: 0px;font-size: 15px;font-weight: 500;}
 
 .content-badge {float: left;width: 50px;border: solid 1px lightgray;border-radius: 50px;}
 

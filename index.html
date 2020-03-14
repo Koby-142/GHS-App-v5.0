@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 
 <head>
-    <script>document.getElementById('namepara').innerHTML = localStorage.getItem('name');document.getElementById('profileCreate').classList.add(localStorage.getItem('index'));document.getElementById('profileWrap').classList.add(localStorage.getItem('setup'));document.getElementById('menu-pop').classList.add(localStorage.getItem('index'));</script>
+  
     <title>GHS App | v5.0</title>
     <!-----------------CSS------------------->
     <link rel="stylesheet" href="main.css">
@@ -148,7 +148,7 @@
 </head>
 
 <body class="vivify fadeIn delay-200" >
-
+    <script></script>
     <!------------------Top-Navigation-------------->
     <div class="navigation-cover">
 
@@ -156,8 +156,8 @@
     <a href="index.html">
     <div class="top-navigation" id="nav-scroll">
 
-        <div class="logo-container" onload="">
-            <img  src="branding/New GSD Logo Micro 512px.svg">
+        <div class="logo-container" >
+            <img  src="branding/New GSD Logo Micro 512px.svg" onload="document.getElementById('profileCreate').classList.add(localStorage.getItem('index'));document.getElementById('profileWrap').classList.add(localStorage.getItem('setup'));">
         </div>
 
     </div>
@@ -420,9 +420,9 @@ function imageOpen(){
  We've made some changes to help customize your experience.
      </p>
 </div>
-<form style="margin-top: 40px;" action="index.html" onsubmit="localStorage.setItem('setup', 'complete');localStorage.setItem('index', 'remove');">
+<form method="GET" style="margin-top: 40px;" action="index.html" onsubmit="localStorage.setItem('setup', 'complete');localStorage.setItem('index', 'remove');">
 <div class="input-field">
-<input oninput="var nameItem = document.getElementById('name').value;localStorage.setItem('name', nameItem);" name="entry.856417767" id="name" type="text" class="validate" required autofocus>
+<input oninput="var nameItem = document.getElementById('name').value;localStorage.setItem('name', nameItem);"  id="name" type="text" class="validate" required autofocus>
 <label for="name">First & Last Name</label>
 </div>
 <h3 style="font-size: 12px;color:#9e9e9e;margin-bottom: 10px;margin-top: -5px;">Avatar</h3>
@@ -430,7 +430,7 @@ function imageOpen(){
 <div class="indeterminate"></div>
 </div></div>
 <div style="display: none;" class="input-field col s12">
-<select id="business" onchange="var businessItem = document.getElementById('business').value;localStorage.setItem('business', businessItem);" class="browser-default" name="entry.1840486379">
+<select id="business" onchange="var businessItem = document.getElementById('business').value;localStorage.setItem('business', businessItem);" class="browser-default" >
  <option value="" disabled selected>Select A Business</option>
  <option value="Harrison County Development Commission">Harrison County Development Commission
  </option>
@@ -473,6 +473,7 @@ function imageOpen(){
 </div>
 </div>
 </div>
+<script>document.getElementById('menu-pop').classList.add(localStorage.getItem('index'));</script>
 </body>
 
 </html>

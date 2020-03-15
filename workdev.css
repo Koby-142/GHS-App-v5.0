@@ -281,6 +281,8 @@ select>option {
     color: #012395 !important;
 }
 
+select.browser-default {background-color: white important}
+
 /* label underline focus color */
 .input-field input[type=text]:focus {
     border-bottom: 1px solid #012395 !important;
@@ -427,6 +429,7 @@ textarea.materialize-textarea.valid:focus,
 .select-wrapper.valid>input.select-dropdown {
     box-shadow: 0 1px 0 0 #012395 !important;
     border-bottom: 1px solid #012395 !important;
+    
 }
 
 /*--------------------------------------User Verification------------------------------------*/

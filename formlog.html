@@ -93,7 +93,7 @@
 
 
             <div class="input-field" >
-                <input name="entry.1830015961" id="other" type="text" class="validate">
+                <input oninput="var otherItem = document.getElementById('other').value;localStorage.setItem('other', otherItem);" name="entry.1830015961" id="other" type="text" class="validate">
                 <label for="other" >Other Place Of Work (If Not Listed Above)</label>
             </div>
             <script>

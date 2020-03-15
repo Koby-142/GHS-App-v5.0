@@ -393,7 +393,7 @@ summary{list-style-type: none;}
 .profile-text-container > p {display: none;}
 .profile-text-container > h2 {display: none;}
   .home-overflow {display: none;}
- 
+ .inject-frame {height: 200%;}
   }
 
 

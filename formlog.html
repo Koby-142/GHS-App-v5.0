@@ -63,11 +63,14 @@
                 });
             </script>
              <div id="lunch-number" class="input-field">
-                <input  oninput="var numberItem = document.getElementById('number').value;localStorage.setItem('number', numberItem);" name="entry.1866640669" id="number" type="number" class="validate" required>
+                <input  oninput="var numberItem = document.getElementById('number').value;localStorage.setItem('number', numberItem);document.getElementById('lunchsave').style.display = 'block';" name="entry.1866640669" id="number" type="number" class="validate" required>
                 <label for="number">Lunch Number</label>
+                <div class="saved-indicator vivify fadeIn" id="lunchsave">
+                    <p>Saved To Profile</p>
+                </div>
             </div>
             <div class="input-field col s12">
-                <select id="business" onchange="var businessItem = document.getElementById('business').value;localStorage.setItem('business', businessItem);"  class="browser-default" name="entry.1840486379" required>
+                <select id="business" onchange="var businessItem = document.getElementById('business').value;localStorage.setItem('business', businessItem);document.getElementById('jobsave').style.display = 'block'"  class="browser-default" name="entry.1840486379" required>
                     <option value="" disabled selected>Select A Business</option>
                     <option value="Harrison County Development Commission">Harrison County Development Commission
                     </option>
@@ -89,12 +92,18 @@
                     <option value="Community Service">Community Service</option>
                     <option onclick="other()" value="(Other) |">Other</option>
                 </select>
+                <div class="saved-indicator vivify fadeIn" id="jobsave">
+                    <p>Saved To Profile</p>
+                </div>
             </div>
 
 
             <div class="input-field" >
-                <input oninput="var otherItem = document.getElementById('other').value;localStorage.setItem('other', otherItem);" name="entry.1830015961" id="other" type="text" class="validate">
+                <input oninput="var otherItem = document.getElementById('other').value;localStorage.setItem('other', otherItem);document.getElementById('othersave').style.display = 'block';" name="entry.1830015961" id="other" type="text" class="validate">
                 <label for="other" >Other Place Of Work (If Not Listed Above)</label>
+                <div class="saved-indicator vivify fadeIn" id="othersave">
+                    <p>Saved To Profile</p>
+                </div>
             </div>
             <script>
                 function other() {

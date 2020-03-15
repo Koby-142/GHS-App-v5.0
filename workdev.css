@@ -317,7 +317,7 @@ input.focus[type=checkbox] {
 
 .log-form-container>form {
     margin-top: 25px;
-    padding-bottom: 50vh;
+   
 }
 
 [type="radio"]:checked+span:after,

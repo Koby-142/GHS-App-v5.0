@@ -82,12 +82,13 @@
         <script id="item-template2" type="text/x-handlebars-template">
          <div class="icon-container">
             {{#each this}}
-            <input required name="icons" id="{{icon}}" type="radio" class="icons" onclick="localStorage.setItem('seticon', 'Icons/' + '{{icon}}' + '.png');">
+            <input required name="icons" id="{{icon}}" type="radio" class="icons" onclick="localStorage.setItem('seticon', 'Icons/' + '{{icon}}' + '.png');localStorage.setItem('icon', '{{icon}}');">
 
         </input>
         <label for="{{icon}}" class="icons">
-            <img loading ="lazy" src="Icons/{{icon}}.png">
+            <img  loading ="lazy" src="Icons/{{icon}}.png">
         </label>
+        
         
         
 
@@ -142,7 +143,7 @@
                         <p  id="namepara">null</p>
                     </div>
              <div class="create-profile">
-                <a href="#menu-pop" onclick="document.getElementById('name').value = localStorage.getItem('name');document.getElementById('ac-number').value = localStorage.getItem('number');document.getElementById('business').value = localStorage.getItem('business');document.getElementById('other').value = localStorage.getItem('other');document.getElementById('menuindi').innerHTML = 'Edit Profile';"><button class="waves-effect">Edit Profile</button></a>
+                <a href="#menu-pop" onclick="document.getElementById('name').value = localStorage.getItem('name');document.getElementById('ac-number').value = localStorage.getItem('number');document.getElementById('business').value = localStorage.getItem('business');document.getElementById('other').value = localStorage.getItem('other');document.getElementById('menuindi').innerHTML = 'Edit Profile';document.getElementById(localStorage.getItem('icon')).checked = true;"><button class="waves-effect">Edit Profile</button></a>
              </div>
                 </div>
             </div>

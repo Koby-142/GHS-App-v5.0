@@ -63,7 +63,7 @@
                 });
             </script>
              <div id="lunch-number" class="input-field">
-                <input name="entry.1866640669" id="number" type="number" class="validate" required>
+                <input  oninput="var numberItem = document.getElementById('number').value;localStorage.setItem('number', numberItem);" name="entry.1866640669" id="number" type="number" class="validate" required>
                 <label for="number">Lunch Number</label>
             </div>
             <div class="input-field col s12">

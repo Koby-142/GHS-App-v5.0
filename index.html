@@ -118,12 +118,16 @@
     })
 </script>
 <script id="item-templateg" type="text/x-handlebars-template">
- <div class="icon-container">
+ <div class="icon-container" >
     {{#each this}}
 
-    <a class="icons" onclick="localStorage.setItem('seticon', 'Icons/' + '{{icon}}' + '.png');">
-<img loading ="lazy" src="Icons/{{icon}}.png">
-</a>
+    <input required name="icons" id="{{icon}}" type="radio" class="icons" onclick="localStorage.setItem('seticon', 'Icons/' + '{{icon}}' + '.png');">
+
+</input>
+<label for="{{icon}}" class="icons">
+    <img loading ="lazy" src="Icons/{{icon}}.png">
+</label>
+
 
         {{/each}}
     </div>

@@ -67,7 +67,7 @@
                 <label for="number">Lunch Number</label>
             </div>
             <div class="input-field col s12">
-                <select id="business" onchange="other()" class="browser-default" name="entry.1840486379" required>
+                <select id="business" onchange="var businessItem = document.getElementById('business').value;localStorage.setItem('business', businessItem);"  class="browser-default" name="entry.1840486379" required>
                     <option value="" disabled selected>Select A Business</option>
                     <option value="Harrison County Development Commission">Harrison County Development Commission
                     </option>

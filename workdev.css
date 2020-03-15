@@ -529,9 +529,7 @@ summary:focus {
 
 .profile-icon {float: left;width:50px;height:50px; border-radius: 50px;border:solid 1px lightgray;margin-top: 4px;;margin-left: 2px;}
 
-.icons > img:hover {border-color:black;background-color: #012395;border: none;}
-.icon-container > input:checked+label>img {background-color: #012395;}
-
+.icon-container > input:checked+label>img {background-color: #012395;border: none;}
 @media (orientation: landscape) {
    .pop-close > button {display: none;}
    .menu-sub {top: 0px;height: 100vh;padding-top: 0px;}

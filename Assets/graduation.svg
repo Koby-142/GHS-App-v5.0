@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1018" height="652" viewBox="0 0 1018 652">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.134" y1="0.226" x2="0.844" y2="0.82" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#283774"/>
+      <stop offset="1" stop-color="#3893a1"/>
+    </linearGradient>
+    <clipPath id="clip-graduation">
+      <rect width="1018" height="652"/>
+    </clipPath>
+  </defs>
+  <g id="graduation" clip-path="url(#clip-graduation)">
+    <rect width="1018" height="652" fill="url(#linear-gradient)"/>
+    <text id="Graduation_2020" data-name="Graduation 2020" transform="translate(112 209)" fill="#fff" font-size="106" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="111">Graduation 2020</tspan></text>
+    <text id="Livestream" transform="translate(246 328)" fill="#fff" font-size="57" font-family="Roboto-Regular, Roboto"><tspan x="133.615" y="60">Livestream</tspan></text>
+    <text id="Starts_May_27_2020_7:00_p.m" data-name="Starts May 27, 2020 7:00 p.m" transform="translate(0 495)" fill="#fff" font-size="41" font-family="Roboto-Regular, Roboto" opacity="0.65"><tspan x="242.71" y="43">Starts May 27, 2020 7:00 p.m</tspan></text>
+    <text id="WGTV_ADMIRALNATION_GHS_App" data-name="WGTV | ADMIRALNATION | GHS App" transform="translate(329 553)" fill="#fff" font-size="22" font-family="Roboto-Regular, Roboto" opacity="0.6"><tspan x="2.609" y="23">WGTV | ADMIRALNATION | GHS App</tspan></text>
+  </g>
+</svg>

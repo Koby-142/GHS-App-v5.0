@@ -399,3 +399,10 @@ summary{list-style-type: none;}
 
 
   .remove {display: none;}
+
+  #live-nd {
+    opacity:1
+}
+#live-nd.erd {
+    opacity: 0;
+}

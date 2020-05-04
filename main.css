@@ -137,7 +137,7 @@ label {}
 
 .group-wrapper {margin: auto; width: 95%;margin-top: 10px;}
 
-.grouped-buttons {position: sticky; top: 205px;width: 100%;z-index: 50;position:-webkit-sticky;}
+.grouped-buttons {; top: 205px;width: 100%;z-index: 50;}
 
 
 

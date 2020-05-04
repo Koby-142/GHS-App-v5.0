@@ -107,6 +107,8 @@ label {}
 
 .swiper-pagination-bullet {background: rgba(255, 255, 255, 0.966) !important;}
 
+.swiper-scrollbar {display: none;}
+
 /*------------------------------------Opened Stories------------------------------------------*/
 
 .story-opened-image > img { width: 100%; top: 0px;height: 100vh;object-fit: cover;}

@@ -11,6 +11,8 @@
     <!-----------------CSS------------------->
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="vivify.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
        <!---------------------Waves Effect----------------------->
 
@@ -268,17 +270,58 @@
     src="https://c.themediacdn.com/embed/media/O7sBCQ/OqvzSehCsA1/mrLrvlwsOOb_5?wmode=opaque"
     allowfullscreen></iframe>
     
-    <div id="live-nd" class="grad-live" style="margin:auto;width: 93%;height:210px;background-color:white;z-index: 50;background-image: url(/assets/graduation.svg);background-size: cover;margin-top: 50px;background-position: center;background-repeat: no-repeat;border-radius: 10px;">
-    
+ 
+
+<div class="swiper-container">
+
+    <div class="swiper-wrapper">
+
+        
+        <div class="swiper-slide"><div><img src="/Assets/graduation.svg"></div></div>
+        <div class="swiper-slide"><div><img src="/Assets/wearing.svg"></div></div>
+
     </div>
+
+    <div class="swiper-pagination"></div>
+
+
+  
+
+    <div class="swiper-scrollbar"></div>
+</div>
     
-    
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+      // Optional parameters
+  
+      loop: true,
+  
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      zoom: {
+    maxRatio: 5,
+  },
+  
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+  
+      autoplay: {
+    delay: 3500,
+  },
+    })
+    </script>
 
 
  
     <!---------------------Grouped Button------------------->
     
-    <div class="grouped-buttons" style="margin-top: 15px;">
+    <div class="grouped-buttons" style="margin-top: 0px;">
         <div on class="group-wrapper ">
             <a href="#pullup-frame">
                 <button class="group-btn left-group"

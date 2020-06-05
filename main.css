@@ -98,6 +98,7 @@ label {}
 .swiper-slide > div {margin: auto; width: 93%;}
 
 .swiper-slide > div > img {width: 100%;border-radius: 10px;}
+.swiper-slide > div > a > img{width: 100%;border-radius: 10px;}
 
 .swiper-slide {width: 100% !important;margin-top: 15px;}
 

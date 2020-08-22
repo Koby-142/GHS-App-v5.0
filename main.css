@@ -150,9 +150,9 @@ label {}
 
 .right-group {border-radius: 0px 10px 10px 0px;}
 
-.group-wrapper {margin: auto; width: 95%;margin-top: 10px;}
+.group-wrapper {margin: auto; width: 95%;margin-top: 45px;}
 
-.grouped-buttons {; top: 205px;width: 100%;z-index: 50;}
+.grouped-buttons { top: 205px;width: 100%;z-index: 50;}
 
 
 
